@@ -1,0 +1,149 @@
+				[THE FARM]
+				  Script
+				  
+				 Story by 
+			   Brendan Reid
+			   
+			Co-Writer - Greg Scobie
+
+
+				Act 1 - Intro
+				-------------
+				
+			  *CAR ENTERS FRAME*
+		WEATHER - Heavy Rain, Night Time (Late)
+			
+		*Open with a car driving along a road*
+		
+	The driver is mute during this scene, we want to create an ominous feeling.
+		
+		*IDEA* - Have muffled radio sounds coming from the car (potential road alert announcements etc)
+		
+	Driver desperately looks around for a place to stay overnight during - sees a sign for a BnB within the next couple of turns.
+		
+		*Car veers right* 
+	
+	Driver goes through a white wooden gate, surrounded by dense trees and a long dirt track road - the farm is not in sight.*
+		
+		*Proceeds to drive up to the end of the road*
+		
+	The old farmhouse eventually comes into scene, it is hard to tell how much guests are currently here but can tell people are inside as there are lights on (porch, and hallway)
+		
+		*Car slowly comes to halt*
+		*engine turned off*
+		
+	The driver exits the vehicle and begins to walk towards the main entrance - tries to take in their surroundings however bad weather and darkness makes this task non primary
+		
+		
+	GAMEPLAY BEGINS NOW
+	-------------------
+	
+	Objective: Press the bell on the front desk to call for the BnB owner
+	
+		*10 seconds pass*
+	
+	Nothing happens, driver is confused, however, notices a sign on the right which states: 'Owner currently out, please take a free key and leave money in honesty box in the morning. Breakfast served at 7am'
+	
+	Objective: Take the key hanging up, proceed upstairs to find your room (ROOM 06)
+	
+		*walk upstairs and enter your room*
+		
+		-FADE DOOR ANIMATION HERE-
+
+	Objective: Enter bed, go to sleep.
+	
+			ACT 2 - Chapter 1
+			  [AWAKENING]
+			  
+		*PLAYER IS JOLTED AWAKE*
+		
+		*LOOKS AT THE TIME, 3:04AM*
+		
+	Player can freely walk around the room right now, there is a constant noise coming from downstairs
+	
+	Objective: Exit the room, investigate the noise.
+	
+		*Farm becomes accessible completely (inside)*
+		
+		*Things in the farm house have changed, some pictures are on the floor, and it is extremely cold.*
+		
+		*Player notices the front door is wide open, and some of the windows are rattling open and shut*
+		
+	Player needs to walk down to the close the door and the windows in the dining area (source of noise)
+	
+		*Player is now feeling anxious, there is no one here*
+		
+	Player decides it might be best to just leave, as the farm begins to become increasingly eerie.
+	
+	Objective: collect your items from your room
+	
+		*As the player walks upstairs, footsteps run behind him, the door is open yet again upon check*
+	
+	Objective: hurry.
+	
+		*Player enters the room again, there is fade animation here*
+		
+	-Everytime the player enters their room, the farm alters somehow. Room numbers change, certain areas become blocked (unnaccessible) and items are added such as demonic paintings on the walls, etc...-
+	
+	The player makes his way out the car, this time moving fast (sprint)
+	
+		*Notices the car won't start*
+		
+	Player turns around to see a face appearing down to him from one of the windows.
+	
+		*SOUND: SUDDEN HIGH PITCHED, CLASSIC HORROR SOUND FOR INTENSITY*
+		
+	The player turns back to the farm this time to find a note directed to him.
+	
+	The note reads:
+	
+	----------------------------------------
+	|  At last, you have awakened me.		|
+	| 										|					
+	|  Years go by and no one has came until|
+	|  you now. Thank you.					|
+	|										|
+	| 										|
+	|										|
+	|  Your room is free of charge.			|
+	|										|
+	|	However, I like to play games.		|
+	|										|
+	|	May we play one? If you win...		|
+	|										|
+	|	You can leave freely.				|
+	|										|
+	|										|
+	|										|
+	|						If not, well.	|
+	|										|
+	|		You will join me here.			|
+	|										|
+	|			Good luck.					|
+	-----------------------------------------
+	
+		*A door opens which has been locked the entire time*
+	
+	Objective: investigate the room
+	
+	The player will now notice a list of instructions, with tasks to be complete
+	
+	
+	TASK LIST: *INCLUDES OUR MISSIONS FOR THE PLAYER - WILL RELATE TO AREAS OUTSIDE, INSIDE, AND BASEMENT / LOFT AREAS*
+	
+	The main goal of the tasks will be to allow the player to try and escape the farm without dying - of course, this will be made entirely possible
+	however, it is important here that the player can also fail, and then be taken to the other world (GAME WIN / FAIL STATE)
+	
+	
+	*important things to note: 
+		- The intro and chapter 1 should take some time to develop.
+		- The cutscene in the beginning should be nothing complex or time consuming.
+		- We want to make sure in the polish that any lighting / sound are near perfect to detail and showcase our abilities in these areas
+		- The missions should be discussed by each developer and relate to the actual escape element of the game as we MUST have a win state.
+	
+	
+
+			ACT 2 - Chapter 2
+				[Playtime]
+				
+			*YET TO BE WRITTEN*
