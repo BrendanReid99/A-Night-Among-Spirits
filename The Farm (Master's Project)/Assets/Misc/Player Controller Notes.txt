@@ -1,0 +1,34 @@
+The Farm - Controller Ideas
+---------------------------
+
+Inspirations - Outlast, Resident Evil 7.
+
+YouTube Sources Researched: https://www.youtube.com/watch?v=2FTDa14nryI&list=PLfhbBaEcybmgidDH3RX_qzFM0mIxWJa21&ab_channel=Comp-3Interactive, https://www.youtube.com/watch?v=xZeTkQ3gbM4&ab_channel=H2ODelirious
+
+ -> Player is merely armed with one single tool (camera) to see in the dark
+ -> First-Person
+ 
+- Would it be ideal for our game that the player can only see if a light source is present i.e., walking with a candle / torch?
+
+- Should the player be allowed to strafe, or be able to look around corners if pressed up against one?
+
+- Should we allow the player to be able to look behind them?
+	-> Example: Press a key, turns the camera to 'look over' the player shoulder?
+	
+- Crosshair for centre screen
+	-> Great for player experience!
+	-> Allows player to understand where they are currently 'DIRECTLY' facing and how to interact with objects better.
+	
+- Movement Ideas
+	-> Fast walk? (Shift Key)
+	-> Crawl / Crouch (Ctrl Key)
+	-> Standard WASD movement
+
+- Movement Restrictions
+	-> Should we have the player not be able to walk directly into a wall?
+		->> Example: If the player is walking towards a wall, it can detect how close you are and then slow the player movement down to zero?
+
+	-> Should we have fatique as a mechanic?
+		->> Example: The player should act as normal to a human as possible, so, should we incorporate heart rate? Rest periods?
+		
+- Are we able to look down and see the player's feet? *Common in first person games now.
