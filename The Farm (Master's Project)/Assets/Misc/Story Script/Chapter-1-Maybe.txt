@@ -33,4 +33,4 @@ On the lobby desk is a folder titled "Important House Information". This contain
 -------                  IF POWER GOES OUT TWICE IN ONE NIGHT, LOCK ALL DOORS AND REMAIN IN ROOM UNTIL MORNING                              ---------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+Objective: Find the basement.
