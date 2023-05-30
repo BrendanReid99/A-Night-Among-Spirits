@@ -1,0 +1,36 @@
+-------------------------
+AFTER GOING TO SLEEP
+-------------------------
+
+The player is awoken by relentless heavy knocking on the front door downstairs. 
+
+Objective: Investigate the knocking on front door.
+
+The player gets out of bed and goes to turn the light on - the power is out. Instead, the player grabs the lit candle on the dresser and starts to head downstairs. The knocking continues.
+As the player reaches the bottom of the stairs, a large gust of wind shakes the house and knocks some items over. Immediately the knocking stops.
+Concerned at the sudden stop, the player decides they might need protection.
+
+Objective: Grab a weapon from inside the house (options: knife, baseball bat(?), misc objects), then open the door.
+
+The player opens the door to see what's happened, but nobody's there. A new car has arrived at some point, but no sign of any other people around. A phone is lying on the doorstep, but it appears to be dead.
+The player steps outside briefly to see if they can spot anyone. Perhaps there's someone in the new car?
+
+Objective: Investigate the car.
+
+As the player approaches the car, it's obvious there's nobody inside it. However, the doors aren't locked. On the passenger seat is a torch, which the player should pick up.
+
+Objective: Head inside to try and find the breaker. Perhaps the lobby desk has information.
+
+As the player heads towards the house, a shadowy figure (with candle light backdrop) is looking at them from one of the bedrooms. If the player looks directly at it, it moves away quickly and heavy heartbeat sounds play for a few seconds.
+The player heads back inside and goes towards the lobby desk.
+
+On the lobby desk is a folder titled "Important House Information". This contains some useless pages about insurance and house rules etc, but also a page saying:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+------- IN THE EVENT OF A POWER OUTAGE, FLIP THE BREAKER LOCATED IN THE BASEMENT. UNDER NO CIRCUMSTANCES OPEN THE RED DOOR. DANGER OF DEATH ---------
+-------                                                                                                                                     ---------
+-------                                                                                                                                     ---------
+-------                  IF POWER GOES OUT TWICE IN ONE NIGHT, LOCK ALL DOORS AND REMAIN IN ROOM UNTIL MORNING                              ---------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
