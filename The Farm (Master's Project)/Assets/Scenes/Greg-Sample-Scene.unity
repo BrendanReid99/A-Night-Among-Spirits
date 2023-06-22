@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0.26415092, g: 0.24795298, b: 0.24795298, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -1513,6 +1513,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc6774fa97f062489d4796d5c3895e4, type: 3}
+--- !u!1 &219478858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: ed2f96078a13e4b46ad3ca51eebf67fa, type: 3}
+  m_PrefabInstance: {fileID: 324296008}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &219478862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219478858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0530217, y: 1.0115494, z: 1.1442835}
+  m_Center: {x: 0, y: 0.50460535, z: -0.062270075}
 --- !u!1001 &248915335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2365,6 +2383,24 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: edb6b1b31fb39473b9e613b9b73b23d6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973983e22257f4007b9b0bb5ccae1184, type: 3}
+--- !u!1 &393288957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 16d3ed667a499a34f84303b32f74e19d, type: 3}
+  m_PrefabInstance: {fileID: 638298926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &393288961
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393288957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0075727, y: 3, z: 0.37033758}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &394480575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3262,6 +3298,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &656108871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 145574, guid: a36156e3b3432374f9acf6f713e12573, type: 3}
+  m_PrefabInstance: {fileID: 292292920}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &656108876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656108871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0075727, y: 3.007828, z: 0.44919738}
+  m_Center: {x: 0, y: 1.496086, z: 0}
 --- !u!1001 &687966934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3571,6 +3625,7 @@ GameObject:
   - component: {fileID: 723849842}
   - component: {fileID: 723849844}
   - component: {fileID: 723849843}
+  - component: {fileID: 723849845}
   m_Layer: 0
   m_Name: Bedroom_furniture4(Clone) (2)
   m_TagString: Untagged
@@ -3643,6 +3698,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723849841}
   m_Mesh: {fileID: 4300000, guid: 15527dee58f0bad48a2bfff8eecbd15c, type: 3}
+--- !u!65 &723849845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723849841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.413023, y: 0.9002033, z: 0.7258713}
+  m_Center: {x: 0, y: 0.45160642, z: 0.016633645}
 --- !u!1001 &733097283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4164,6 +4232,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 794ecf92a44208f4295c7f4e396eb98f, type: 3}
+--- !u!1 &846677531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: ed2f96078a13e4b46ad3ca51eebf67fa, type: 3}
+  m_PrefabInstance: {fileID: 1514406136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &846677535
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846677531}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0530217, y: 1.0115494, z: 1.1442835}
+  m_Center: {x: 0, y: 0.50460535, z: -0.062270075}
 --- !u!1001 &856383861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5737,6 +5823,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13b51ae23b5bf9c40b9d3ca80015f3d5, type: 3}
+--- !u!1 &1230680847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1018855719644062, guid: dd51be22530c5b54593d28e8de4c5e54, type: 3}
+  m_PrefabInstance: {fileID: 1709386691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1230680852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230680847}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.58233666, y: 1.392242, z: 0.60406184}
+  m_Center: {x: 0, y: 0.69834125, z: 0}
 --- !u!1001 &1234505674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6571,6 +6675,7 @@ GameObject:
   - component: {fileID: 1512386166}
   - component: {fileID: 1512386168}
   - component: {fileID: 1512386167}
+  - component: {fileID: 1512386169}
   m_Layer: 0
   m_Name: Bedroom_furniture4(Clone) (4)
   m_TagString: Untagged
@@ -6643,6 +6748,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512386165}
   m_Mesh: {fileID: 4300000, guid: 15527dee58f0bad48a2bfff8eecbd15c, type: 3}
+--- !u!65 &1512386169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512386165}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.413023, y: 0.9002033, z: 0.7258713}
+  m_Center: {x: 0, y: 0.45160642, z: 0.016633645}
 --- !u!1001 &1514406136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7634,6 +7752,7 @@ GameObject:
   - component: {fileID: 1748646241}
   - component: {fileID: 1748646243}
   - component: {fileID: 1748646242}
+  - component: {fileID: 1748646244}
   m_Layer: 0
   m_Name: Bedroom_furniture4(Clone) (3)
   m_TagString: Untagged
@@ -7706,6 +7825,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748646240}
   m_Mesh: {fileID: 4300000, guid: 15527dee58f0bad48a2bfff8eecbd15c, type: 3}
+--- !u!65 &1748646244
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748646240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4130234, y: 0.9002033, z: 0.7258715}
+  m_Center: {x: 0, y: 0.45160642, z: 0.016629834}
 --- !u!1001 &1798091899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7820,6 +7952,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57fa408e6221f644d9fbfc372c79d78d, type: 3}
+--- !u!1 &1801267418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 132306, guid: 13b51ae23b5bf9c40b9d3ca80015f3d5, type: 3}
+  m_PrefabInstance: {fileID: 394480575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1801267423
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801267418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4414413, y: 3.0107596, z: 0.44789994}
+  m_Center: {x: 0.00000012665987, y: 1.5053798, z: -0.000000052154064}
 --- !u!1001 &1848572109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8802,6 +8952,7 @@ GameObject:
   - component: {fileID: 2040588790}
   - component: {fileID: 2040588792}
   - component: {fileID: 2040588791}
+  - component: {fileID: 2040588793}
   m_Layer: 0
   m_Name: Bedroom_furniture4(Clone) (1)
   m_TagString: Untagged
@@ -8874,6 +9025,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040588789}
   m_Mesh: {fileID: 4300000, guid: 15527dee58f0bad48a2bfff8eecbd15c, type: 3}
+--- !u!65 &2040588793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040588789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.413023, y: 0.9002033, z: 0.7258713}
+  m_Center: {x: 0, y: 0.45160642, z: 0.016633645}
 --- !u!1001 &2066288999
 PrefabInstance:
   m_ObjectHideFlags: 0
