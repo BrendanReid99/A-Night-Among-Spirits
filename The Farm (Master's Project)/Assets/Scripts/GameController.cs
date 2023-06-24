@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
 
     public bool playerBedroomKey = false;
+    public bool basementDoorKey = false;
 
 
     // Start is called before the first frame update
@@ -23,6 +24,11 @@ public class GameController : MonoBehaviour
     public void playerBedroomKeyPickup()
     {
         playerBedroomKey = true;
+    }
+
+    public void basementKeyPickup()
+    {
+        basementDoorKey = true;
     }
 
 

@@ -4759,6 +4759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBedroomKey: 0
+  basementDoorKey: 0
 --- !u!1001 &651238629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5544,7 +5545,7 @@ GameObject:
   - component: {fileID: 735992292}
   - component: {fileID: 735992291}
   - component: {fileID: 735992290}
-  - component: {fileID: 735992289}
+  - component: {fileID: 735992294}
   m_Layer: 0
   m_Name: Doors1 (1)
   m_TagString: Interactable
@@ -5567,18 +5568,6 @@ Transform:
   m_Father: {fileID: 676213034}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &735992289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735992287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 418f1eb1810cfcb4e9bf6caab04014ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &735992290
 Animator:
   serializedVersion: 4
@@ -5662,6 +5651,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735992287}
   m_Mesh: {fileID: 4300002, guid: 96a3e5c53b458864ea03d7298f6d73da, type: 3}
+--- !u!114 &735992294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735992287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c62933fb10e81844ab96bbd9c14d367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 639777589}
+  locked: {fileID: 243993716}
 --- !u!1001 &736202563
 PrefabInstance:
   m_ObjectHideFlags: 0
