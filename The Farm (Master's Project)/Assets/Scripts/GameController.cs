@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
 
     public bool playerBedroomKey = false;
     public bool basementDoorKey = false;
+    public bool bedroom2Open = false;
+    public bool bedroom3Open = false;
 
 
     // Start is called before the first frame update
