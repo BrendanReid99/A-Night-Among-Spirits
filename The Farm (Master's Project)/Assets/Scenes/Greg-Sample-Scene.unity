@@ -4788,7 +4788,7 @@ GameObject:
   - component: {fileID: 639777593}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4836,6 +4836,8 @@ MonoBehaviour:
   basementDoorKey: 0
   bedroom2Open: 0
   bedroom3Open: 0
+  EnterHouseText: {fileID: 1431996444}
+  FindBedroomKeyText: {fileID: 2066975632}
 --- !u!95 &639777593
 Animator:
   serializedVersion: 4
@@ -4846,7 +4848,7 @@ Animator:
   m_GameObject: {fileID: 639777589}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 092901fe727369d4e8dca6445a74f5bd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

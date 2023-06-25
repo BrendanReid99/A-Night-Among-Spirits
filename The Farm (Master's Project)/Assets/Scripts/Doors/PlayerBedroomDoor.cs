@@ -10,7 +10,7 @@ public class PlayerBedroomDoor : MonoBehaviour, IInteractable
     private GameController gameController;
     public TextMeshProUGUI locked;
     private float fadeDuration = 4f;
-
+    Animator controlAnim;
     Animator anim;
     private bool doorOpen = false;
 
@@ -18,6 +18,7 @@ public class PlayerBedroomDoor : MonoBehaviour, IInteractable
     {
         anim = this.GetComponent<Animator>();
         gameController = controller.GetComponent<GameController>();
+        controlAnim = controller.GetComponent<Animator>();
     }
 
     public void Interact()
@@ -61,7 +62,7 @@ public class PlayerBedroomDoor : MonoBehaviour, IInteractable
         }
 
         locked.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
-        
 
+        controlAnim.SetTrigger("EnterHouseExit2");
     }
 }
