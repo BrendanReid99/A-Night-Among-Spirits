@@ -1,1 +1,25 @@
 Temp
+
+
+1. Did the game mechanics and controls feel intuitive and responsive?
+
+2. Were the game objectives clear and easy to understand?
+
+3. Did you encounter any bugs or technical issues while playing?
+
+4. Were the graphics and audio appealing and immersive? (Not so important as not polished).
+
+5. Did you encounter any points where you felt frustrated or stuck? If so, why?
+
+6. Were there any aspects of the game that you particularly enjoyed or disliked?
+
+7. Did you encounter any aspects of the game that felt repetitive or monotonous?
+
+8. Did you have any specific suggestions or ideas for improving the game?
+
+SPECIFIC TO CONTROLLER
+
+1. Did the character movement and looking feel smooth?
+2. Did interaction with objects feel smooth?
+3. Was the level of headbob comfortable?
+4. Did the player speed feel fair and immersive?
