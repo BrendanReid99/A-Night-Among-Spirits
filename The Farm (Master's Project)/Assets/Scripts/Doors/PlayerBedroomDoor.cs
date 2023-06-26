@@ -14,6 +14,9 @@ public class PlayerBedroomDoor : MonoBehaviour, IInteractable
     Animator anim;
     private bool doorOpen = false;
 
+    private bool stateChange1 = false;
+
+
     void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -24,6 +27,13 @@ public class PlayerBedroomDoor : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (gameController.playerBedroomKey == true) {
+            
+            if(stateChange1 == false)
+            {
+            controlAnim.SetTrigger("EnterHouseExit");
+            stateChange1 = true;
+            }
+
             if (doorOpen == false)
             {
                 anim.Play("Door1 open");
@@ -35,6 +45,9 @@ public class PlayerBedroomDoor : MonoBehaviour, IInteractable
                 doorOpen = false;
             }
         }
+
+        
+
         else
         {
             StartCoroutine(doorLocked());

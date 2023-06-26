@@ -4838,6 +4838,7 @@ MonoBehaviour:
   bedroom3Open: 0
   EnterHouseText: {fileID: 1431996444}
   FindBedroomKeyText: {fileID: 2066975632}
+  ExploreHouseText: {fileID: 640254891}
 --- !u!95 &639777593
 Animator:
   serializedVersion: 4

@@ -121,7 +121,7 @@ public class GameController : MonoBehaviour
 
         float elapsedTime = 0f;
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0.5f);
 
         Color startColor = ExploreHouseText.color;
 
