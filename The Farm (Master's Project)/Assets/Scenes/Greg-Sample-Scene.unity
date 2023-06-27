@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009012734, g: 0.013102855, b: 0.02050359, a: 1}
+  m_IndirectSpecularColor: {r: 0.009012722, g: 0.013102869, b: 0.020503528, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19453,6 +19453,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4225476648072392, guid: 11f39b2068548fb489e296907330723e, type: 3}
   m_PrefabInstance: {fileID: 1827286354}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1835826248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6759268833284243220, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
+  m_PrefabInstance: {fileID: 1895148285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1835826252
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835826248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.35316643, y: 0.97665346, z: 0.30289912}
+  m_Center: {x: -0.007821765, y: 0.0013196318, z: 0.089586}
+--- !u!114 &1835826253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835826248}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfb4a0bb65c88f4c846a6cc0e7f8b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1835826254
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835826248}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf6cbeca1af1b234a805bc0be3c8a90a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1841270467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19859,10 +19909,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -176.99
       objectReference: {fileID: 0}
+    - target: {fileID: 4726574969519735953, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.72105086
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726574969519735953, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.69288224
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726574969519735953, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000020489097
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726574969519735953, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000040978193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726574969519735953, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -87.718
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325377174940791599, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6325377174940791599, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bf6cbeca1af1b234a805bc0be3c8a90a, type: 2}
+    - target: {fileID: 6759268833284243220, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b96497ec697c2604eb26e7e0f3fa0b8c, type: 3}
 --- !u!1001 &1901749228

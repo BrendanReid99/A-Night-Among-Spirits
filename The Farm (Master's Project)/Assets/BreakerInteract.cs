@@ -25,13 +25,13 @@ public class BreakerInteract : MonoBehaviour, IInteractable
         if(breakerOn == false)
         {
             Debug.Log("turn breaker on");
-            anim.Play("breakerOn");
+            anim.Play("BreakerOn");
             breakerOn = true;
         }
         else
         {
             Debug.Log("turn breaker off");
-            anim.Play("breakerOff");
+            anim.Play("BreakerOff");
             breakerOn = false;
         }
     }
