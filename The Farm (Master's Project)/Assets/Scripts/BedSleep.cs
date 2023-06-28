@@ -9,7 +9,7 @@ public class BedSleep : MonoBehaviour, IInteractable
     public GameObject controller;
     private GameController gameController;
     Animator anim;
-    
+
     private float fadeDuration = 2f;
     public Image fadeBlack;
 
@@ -26,22 +26,23 @@ public class BedSleep : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Interact()
     {
-        if(hasSlept == false)
+        if (hasSlept == false)
         {
-           StartCoroutine(goSleep());
+            StartCoroutine(goSleep());
             hasSlept = true;
         }
-        
+
     }
 
     private IEnumerator goSleep()
     {
-        
+
+        anim.SetTrigger("ExploreExit");
 
         Color currentColor = fadeBlack.color;
         Color targetColor = Color.black;
@@ -60,7 +61,25 @@ public class BedSleep : MonoBehaviour, IInteractable
 
         fadeBlack.color = targetColor;
 
+        yield return new WaitForSeconds(2);
+
+        timer = 0f;
+        
         anim.SetTrigger("GoToBedExit");
+
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / fadeDuration;
+
+            fadeBlack.color = Color.Lerp(targetColor, currentColor, t);
+
+            yield return null;
+        }
+
+        fadeBlack.color = currentColor;
+
+        
 
     }
 }

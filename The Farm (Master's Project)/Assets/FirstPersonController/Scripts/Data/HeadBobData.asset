@@ -115,10 +115,10 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 4
   xAmplitude: 0.1
-  yAmplitude: 0.15
-  xFrequency: 2
-  yFrequency: 4
-  runAmplitudeMultiplier: 2
-  runFrequencyMultiplier: 1.5
+  yAmplitude: 0.1
+  xFrequency: 1.5
+  yFrequency: 3
+  runAmplitudeMultiplier: 1.5
+  runFrequencyMultiplier: 1.1
   crouchAmplitudeMultiplier: 0.2
   crouchFrequencyMultiplier: 1

@@ -19521,7 +19521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5904583132571519024, guid: b7ae517300e69864cb342535068ca962, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5904583132571519024, guid: b7ae517300e69864cb342535068ca962, type: 3}
       propertyPath: leanAmount
