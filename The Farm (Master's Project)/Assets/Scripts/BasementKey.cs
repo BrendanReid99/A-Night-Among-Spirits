@@ -8,6 +8,8 @@ public class BasementKey : MonoBehaviour, IInteractable
     public GameObject controller;
     private GameController gameController;
 
+    public GameObject child;
+
     public TextMeshProUGUI basementKeyPickup;
     public GameObject basementKey;
     public float fadeDuration = 1f;
@@ -23,6 +25,7 @@ public class BasementKey : MonoBehaviour, IInteractable
         Debug.Log("Basement Key Picked Up");
         StartCoroutine(keyPickup());
         basementKey.GetComponent<MeshRenderer>().enabled = false;
+        Destroy(child);
         gameController.basementKeyPickup();
 
     }

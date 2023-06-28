@@ -8,6 +8,8 @@ public class BedroomKey : MonoBehaviour, IInteractable
     public GameObject controller;
     private GameController gameController;
 
+    public GameObject child;
+
     public TextMeshProUGUI bedroomKeyPickup;
     public GameObject bedroomKey;
     public float fadeDuration = 1f;
@@ -23,6 +25,7 @@ public class BedroomKey : MonoBehaviour, IInteractable
         Debug.Log("Bedroom Key Picked Up");
         StartCoroutine(keyPickup());
         bedroomKey.GetComponent<MeshRenderer>().enabled = false;
+        Destroy(child);
         gameController.playerBedroomKeyPickup();
         
     }
