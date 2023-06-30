@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public bool basementDoorKey = false;
     public bool bedroom2Open = false;
     public bool bedroom3Open = false;
+    public bool headDownstairs = false;
 
     private float fadeDuration = 1f;
 
@@ -62,6 +63,7 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("Objective4");
         StartCoroutine(InvestigateBanging());
+        headDownstairs = true;
     }
 
     private IEnumerator EnterHouse()

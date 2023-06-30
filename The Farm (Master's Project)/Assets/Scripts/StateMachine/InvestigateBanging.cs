@@ -15,6 +15,7 @@ public class InvestigateBanging : StateMachineBehaviour
         GameController = GameObject.FindWithTag("GameController");
         controller = GameController.GetComponent<GameController>();
         controller.Objective4();
+        controller.headDownstairs = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
