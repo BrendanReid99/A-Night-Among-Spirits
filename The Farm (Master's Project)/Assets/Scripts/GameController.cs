@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI EnterHouseText;
     public TextMeshProUGUI FindBedroomKeyText;
     public TextMeshProUGUI ExploreHouseText;
+    public TextMeshProUGUI InvestigateBangingText;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,12 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("Objective3");
         StartCoroutine(ExploreHouse());
+    }
+
+    public void Objective4()
+    {
+        Debug.Log("Objective4");
+        StartCoroutine(InvestigateBanging());
     }
 
     private IEnumerator EnterHouse()
@@ -114,7 +121,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator ExploreHouse()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(1);
 
         ExploreHouseText.gameObject.SetActive(true); 
 
@@ -135,6 +142,31 @@ public class GameController : MonoBehaviour
         }
 
         ExploreHouseText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
+    }
+
+    private IEnumerator InvestigateBanging()
+    {
+        yield return new WaitForSeconds(1);
+
+        InvestigateBangingText.gameObject.SetActive(true);
+
+
+        float elapsedTime = 0f;
+
+        yield return new WaitForSeconds(0.5f);
+
+        Color startColor = InvestigateBangingText.color;
+
+        while (elapsedTime < fadeDuration)
+        {
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            InvestigateBangingText.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        InvestigateBangingText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
     }
 
 }
