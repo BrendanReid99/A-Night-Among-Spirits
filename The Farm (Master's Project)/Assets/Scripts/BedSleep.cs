@@ -7,8 +7,10 @@ public class BedSleep : MonoBehaviour, IInteractable
 {
 
     public GameObject controller;
+    [SerializeField] private GameObject _door;
     private GameController gameController;
     Animator anim;
+    Animator doorAnim;
 
     private float fadeDuration = 2f;
     public Image fadeBlack;
@@ -21,6 +23,7 @@ public class BedSleep : MonoBehaviour, IInteractable
         fadeBlack.color = Color.clear;
         gameController = controller.GetComponent<GameController>();
         anim = controller.GetComponent<Animator>();
+        doorAnim = _door.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class BedSleep : MonoBehaviour, IInteractable
         if (hasSlept == false)
         {
             StartCoroutine(goSleep());
+            doorAnim.Play("Door1 close");
             hasSlept = true;
         }
 
@@ -43,7 +47,6 @@ public class BedSleep : MonoBehaviour, IInteractable
     {
 
         anim.SetTrigger("ExploreExit");
-
         Color currentColor = fadeBlack.color;
         Color targetColor = Color.black;
 
