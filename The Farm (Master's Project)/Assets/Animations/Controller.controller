@@ -12,6 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 101eec062f6bb1643ae6be0df4e9e384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1102 &-8460944083245452851
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FindBreaker
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-7386521903236173898
 AnimatorState:
   serializedVersion: 6
@@ -87,10 +113,16 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: 530, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2684817955229329578}
-    m_Position: {x: 330, y: 630, z: 0}
+    m_Position: {x: 330, y: 620, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1344388577328089236}
-    m_Position: {x: 330, y: 720, z: 0}
+    m_Position: {x: 330, y: 710, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -8460944083245452851}
+    m_Position: {x: 330, y: 800, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 4279208417689337810}
+    m_Position: {x: 330, y: 880, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -383,7 +415,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Investigate Car + Outside
+  m_Name: InvestigateOutsideCar
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -445,6 +477,32 @@ AnimatorTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 1
+--- !u!1102 &4279208417689337810
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FlipBreaker
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &4317740188076053793
 AnimatorState:
   serializedVersion: 6
