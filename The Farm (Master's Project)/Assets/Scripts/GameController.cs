@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public bool bedroom2Open = false;
     public bool bedroom3Open = false;
     public bool headDownstairs = false;
+    public bool checkDoor = false;
 
     private float fadeDuration = 1f;
 
@@ -64,6 +65,7 @@ public class GameController : MonoBehaviour
         Debug.Log("Objective4");
         StartCoroutine(InvestigateBanging());
         headDownstairs = true;
+        checkDoor = true;
     }
 
     private IEnumerator EnterHouse()
@@ -98,8 +100,6 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(4);
 
         FindBedroomKeyText.gameObject.SetActive(true);
-
-
 
         float elapsedTime = 0f;
 
