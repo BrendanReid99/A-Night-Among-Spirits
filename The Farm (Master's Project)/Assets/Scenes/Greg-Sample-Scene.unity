@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009012734, g: 0.013102855, b: 0.02050359, a: 1}
+  m_IndirectSpecularColor: {r: 0.009012722, g: 0.013102869, b: 0.020503528, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8351,6 +8351,7 @@ MonoBehaviour:
   bedroom2Open: 0
   bedroom3Open: 0
   headDownstairs: 0
+  checkDoor: 0
   EnterHouseText: {fileID: 1431996444}
   FindBedroomKeyText: {fileID: 2066975632}
   ExploreHouseText: {fileID: 640254891}
@@ -34283,7 +34284,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3081606960149423267
+--- !u!114 &3081606960149423272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34292,6 +34293,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3081606960149423262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 418f1eb1810cfcb4e9bf6caab04014ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 76a37f170084e6343b77c89a7daf643a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 639777589}
