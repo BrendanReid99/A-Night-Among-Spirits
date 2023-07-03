@@ -13,6 +13,7 @@ public class TriggerRain : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Collision");
         GetComponent<AudioSource>().Stop();
     }
 }
