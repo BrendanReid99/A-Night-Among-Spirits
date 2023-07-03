@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class TriggerRain : MonoBehaviour
 {
+    [SerializeField] private GameObject weather;
     public AudioClip rain;
 
     void Start()
     {
-        GetComponent<AudioSource>().playOnAwake = false;
-        GetComponent<AudioSource>().clip = rain;
+        weather.GetComponent<AudioSource>().playOnAwake = false;
+        weather.GetComponent<AudioSource>().clip = rain;
     }
-    void OnTriggerEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
         Debug.Log("Collision");
-        GetComponent<AudioSource>().Stop();
+        weather.GetComponent<AudioSource>().Stop();
     }
 }
