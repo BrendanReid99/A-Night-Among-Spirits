@@ -11,7 +11,7 @@ public class TriggerRain : MonoBehaviour
         GetComponent<AudioSource>().playOnAwake = false;
         GetComponent<AudioSource>().clip = rain;
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collision collision)
     {
         Debug.Log("Collision");
         GetComponent<AudioSource>().Stop();
