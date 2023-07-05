@@ -46,7 +46,7 @@ public class BasementKey : MonoBehaviour, IInteractable
             basementKeyPickup.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
 
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime);
+            
             yield return null;
         }
 

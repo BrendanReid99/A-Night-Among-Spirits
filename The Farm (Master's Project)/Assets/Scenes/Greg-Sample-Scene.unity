@@ -1128,6 +1128,7 @@ MonoBehaviour:
   _light4: {fileID: 255434979}
   _light5: {fileID: 878487433}
   switchOn: 1
+  breaker: {fileID: 1087930608430237371}
 --- !u!1001 &116761368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7604,6 +7605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfb4a0bb65c88f4c846a6cc0e7f8b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakerOn: 1
   lightsArray:
   - {fileID: 1933814630288673}
   - {fileID: 3786290147028967296}
@@ -32133,6 +32135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfb4a0bb65c88f4c846a6cc0e7f8b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakerOn: 1
   lightsArray: []
 --- !u!95 &1835826254
 Animator:
@@ -36681,6 +36684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 1850286550}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!65 &205008008382841778
 BoxCollider:
@@ -36727,6 +36731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 216923662}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!65 &205008008984291852
 BoxCollider:
@@ -36773,6 +36778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 199613156}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!65 &205008009248524962
 BoxCollider:
@@ -36832,6 +36838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 214885525}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!205 &205008010143489459
 LODGroup:
@@ -36865,6 +36872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 776825327}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!65 &205008010143489461
 BoxCollider:
@@ -36911,6 +36919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 870300751}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!65 &205008010252409025
 BoxCollider:
@@ -38197,6 +38206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 1467996876}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!33 &2219615808626288550
 MeshFilter:
@@ -39288,6 +39298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 776825327}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!33 &3970348861919929998
 MeshFilter:
@@ -39402,6 +39413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 213313291}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!65 &3993228581455369752
 BoxCollider:
@@ -39732,6 +39744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 690545810}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!33 &4221891743566954453
 MeshFilter:
@@ -39927,6 +39940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 1618758516}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 0
 --- !u!65 &4525174520290327039
 BoxCollider:
@@ -41350,6 +41364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switch: {fileID: 1006882872}
+  breaker: {fileID: 1087930608430237371}
   switchOn: 1
 --- !u!23 &8060792458133112202
 MeshRenderer:

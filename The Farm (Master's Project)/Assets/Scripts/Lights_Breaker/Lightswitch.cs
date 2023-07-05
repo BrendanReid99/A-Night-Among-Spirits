@@ -6,6 +6,8 @@ public class Lightswitch : MonoBehaviour, IInteractable
 {
 
     [SerializeField] private GameObject _switch;
+    [SerializeField] private GameObject breaker;
+    private BreakerInteract breakerInteract;
     private Light light;
 
     public bool switchOn = false;
@@ -14,6 +16,7 @@ public class Lightswitch : MonoBehaviour, IInteractable
     void Start()
     {
         light = _switch.GetComponent<Light>();
+        breakerInteract = breaker.GetComponent<BreakerInteract>();
     }
 
     // Update is called once per frame
@@ -37,19 +40,25 @@ public class Lightswitch : MonoBehaviour, IInteractable
 
     public void TurnLightOn()
     {
-        if(light.enabled == false)
+        if(breakerInteract.breakerOn == true)
         {
-            light.enabled = true;
-        }
-        if(switchOn == false)
-        {
-            switchOn = true;
+            if (light.enabled == false)
+            {
+                light.enabled = true;
+            }
+            if (switchOn == false)
+            {
+                switchOn = true;
+            }
         }
         
     }
 
     public void TurnLightOff()
     {
+
+
+
         if(light.enabled == true)
         {
             light.enabled = false;

@@ -6,7 +6,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
 {
 
     Animator anim;
-    private bool breakerOn = true;
+    public bool breakerOn = true;
     [SerializeField] GameObject[] lightsArray;
 
 

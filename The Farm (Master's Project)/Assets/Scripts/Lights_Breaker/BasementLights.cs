@@ -20,6 +20,9 @@ public class BasementLights : MonoBehaviour, IInteractable
 
     public bool switchOn = false;
 
+    [SerializeField] private GameObject breaker;
+    private BreakerInteract breakerInteract;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,7 @@ public class BasementLights : MonoBehaviour, IInteractable
         light3 = _light3.GetComponent<Light>();
         light4 = _light4.GetComponent<Light>();
         light5 = _light5.GetComponent<Light>();
+        breakerInteract = breaker.GetComponent<BreakerInteract>();
     }
 
     // Update is called once per frame
@@ -54,20 +58,25 @@ public class BasementLights : MonoBehaviour, IInteractable
 
     public void TurnLightOn()
     {
-        if(light0.enabled == false)
+        if(breakerInteract.breakerOn == true)
         {
-            light0.enabled = true;
-            light1.enabled = true;
-            light2.enabled = true;
-            light3.enabled = true;
-            light4.enabled = true;
-            light5.enabled = true;
+            if (light0.enabled == false)
+            {
+                light0.enabled = true;
+                light1.enabled = true;
+                light2.enabled = true;
+                light3.enabled = true;
+                light4.enabled = true;
+                light5.enabled = true;
+            }
+
+            if (switchOn == false)
+            {
+                switchOn = true;
+            }
         }
 
-        if(switchOn == false)
-        {
-            switchOn = true;
-        }
+        
        
     }
 
