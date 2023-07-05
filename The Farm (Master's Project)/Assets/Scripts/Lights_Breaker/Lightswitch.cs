@@ -26,13 +26,39 @@ public class Lightswitch : MonoBehaviour, IInteractable
     {
         if (switchOn == false)
         {
-            light.enabled = true;
-            switchOn = true;
+            TurnLightOn();
+            
         }
         else
         {
+            TurnLightOff();
+        }
+    }
+
+    public void TurnLightOn()
+    {
+        if(light.enabled == false)
+        {
+            light.enabled = true;
+        }
+        if(switchOn == false)
+        {
+            switchOn = true;
+        }
+        
+    }
+
+    public void TurnLightOff()
+    {
+        if(light.enabled == true)
+        {
             light.enabled = false;
+        }
+        
+        if(switchOn == true)
+        {
             switchOn = false;
         }
+        
     }
 }

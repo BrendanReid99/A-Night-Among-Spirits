@@ -6,7 +6,9 @@ public class BreakerInteract : MonoBehaviour, IInteractable
 {
 
     Animator anim;
-    private bool breakerOn = false;
+    private bool breakerOn = true;
+    [SerializeField] GameObject[] lightsArray;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,25 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             Debug.Log("turn breaker off");
             anim.Play("BreakerOff");
             breakerOn = false;
+
+            TurnLightsOff();
+
+
+        }
+    }
+
+    private void TurnLightsOff()
+    {
+        foreach (GameObject obj in lightsArray)
+        {
+            if(obj.tag == "BasementLight")
+            {
+                obj.GetComponent<BasementLights>().TurnLightOff();
+            }
+            else
+            {
+                obj.GetComponent<Lightswitch>().TurnLightOff();
+            }
         }
     }
 }
