@@ -29,6 +29,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             Debug.Log("turn breaker on");
             anim.Play("BreakerOn");
             breakerOn = true;
+            TurnLightsOn();
         }
         else
         {
@@ -53,6 +54,29 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             else
             {
                 obj.GetComponent<Lightswitch>().TurnLightOff();
+            }
+        }
+    }
+
+    private void TurnLightsOn()
+    {
+        foreach (GameObject obj in lightsArray)
+        {
+            if(obj.tag == "BasementLight")
+            {
+
+                if(obj.GetComponent<BasementLights>().switchOn == true)
+                {
+                    obj.GetComponent<BasementLights>().TurnLightOn();
+                }
+            }
+            else
+            {
+                if(obj.GetComponent<Lightswitch>().switchOn == true)
+                {
+                    Debug.Log(obj.GetComponent<Lightswitch>().switchOn);
+                    obj.GetComponent<Lightswitch>().TurnLightOn();
+                }
             }
         }
     }

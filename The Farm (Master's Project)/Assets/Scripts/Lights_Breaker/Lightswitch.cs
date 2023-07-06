@@ -29,12 +29,20 @@ public class Lightswitch : MonoBehaviour, IInteractable
     {
         if (switchOn == false)
         {
-            TurnLightOn();
+            if(breakerInteract.breakerOn == true)
+            {
+                light.enabled = true;
+                switchOn = true;
+            }
             
         }
         else
         {
-            TurnLightOff();
+            if(breakerInteract.breakerOn == true)
+            {
+                light.enabled = false;
+                switchOn = false;
+            }
         }
     }
 
@@ -46,10 +54,7 @@ public class Lightswitch : MonoBehaviour, IInteractable
             {
                 light.enabled = true;
             }
-            if (switchOn == false)
-            {
-                switchOn = true;
-            }
+           
         }
         
     }
@@ -57,16 +62,9 @@ public class Lightswitch : MonoBehaviour, IInteractable
     public void TurnLightOff()
     {
 
-
-
         if(light.enabled == true)
         {
             light.enabled = false;
-        }
-        
-        if(switchOn == true)
-        {
-            switchOn = false;
         }
         
     }

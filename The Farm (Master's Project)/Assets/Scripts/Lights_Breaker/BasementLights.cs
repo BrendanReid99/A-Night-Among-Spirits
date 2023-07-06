@@ -48,11 +48,40 @@ public class BasementLights : MonoBehaviour, IInteractable
 
         if (switchOn == false)
         {
-            TurnLightOn();
+            if (breakerInteract.breakerOn == true)
+            {
+                if (light0.enabled == false)
+                {
+                    light0.enabled = true;
+                    light1.enabled = true;
+                    light2.enabled = true;
+                    light3.enabled = true;
+                    light4.enabled = true;
+                    light5.enabled = true;
+                }
+
+                if (switchOn == false)
+                {
+                    switchOn = true;
+                }
+            }
         }
         else
         {
-            TurnLightOff();
+            if (light0.enabled == true)
+            {
+                light0.enabled = false;
+                light1.enabled = false;
+                light2.enabled = false;
+                light3.enabled = false;
+                light4.enabled = false;
+                light5.enabled = false;
+            }
+
+            if (switchOn == true)
+            {
+                switchOn = false;
+            }
         }
     }
 
@@ -70,10 +99,6 @@ public class BasementLights : MonoBehaviour, IInteractable
                 light5.enabled = true;
             }
 
-            if (switchOn == false)
-            {
-                switchOn = true;
-            }
         }
 
         
@@ -92,10 +117,6 @@ public class BasementLights : MonoBehaviour, IInteractable
             light5.enabled = false;
         }
 
-        if(switchOn == true)
-        {
-            switchOn = false;
-        }
     }
 
 }
