@@ -5495,7 +5495,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506503685}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -7674,6 +7674,7 @@ MonoBehaviour:
   - {fileID: 1933814375437870}
   - {fileID: 1933813495340862}
   - {fileID: 114354289}
+  PPV: {fileID: 506503685}
 --- !u!65 &752570189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31358,7 +31359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278697048}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
@@ -32251,6 +32252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakerOn: 1
   lightsArray: []
+  PPV: {fileID: 0}
 --- !u!95 &1835826254
 Animator:
   serializedVersion: 4
