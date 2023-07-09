@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class InvestigateOutside : StateMachineBehaviour
 {
+
+    private GameObject GameController;
+    private GameController controller;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        GameController = GameObject.FindWithTag("GameController");
+        controller = GameController.GetComponent<GameController>();
         Debug.Log("Objective 5");  
     }
 
