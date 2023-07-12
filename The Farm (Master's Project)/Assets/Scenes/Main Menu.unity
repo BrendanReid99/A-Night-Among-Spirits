@@ -802,6 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0358e1578177449b0148e0277116ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teddyBear: {fileID: 999024272}
 --- !u!1 &1072834580
 GameObject:
   m_ObjectHideFlags: 0
