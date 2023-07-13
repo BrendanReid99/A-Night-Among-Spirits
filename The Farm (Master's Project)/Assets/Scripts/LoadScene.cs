@@ -7,6 +7,7 @@ public class LoadScene : MonoBehaviour
 {
    public void NewGameLoad()
     {
+        Debug.Log("Click");
         SceneManager.LoadScene("Game");
     }
 }
