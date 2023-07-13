@@ -8,16 +8,27 @@ public class TeddyDisappear : MonoBehaviour
     public GameObject teddyBear;
     float timePassed;
     float thresholdTime = 3.0f;
-    //bool isTeddyVisible = true;
+    bool isTeddyVisible = true;
 
     // Update is called once per frame
     void Update()
     {
         timePassed += Time.deltaTime;
 
-        if (timePassed > thresholdTime) {
+        if (timePassed > thresholdTime && isTeddyVisible == true) {
             teddyBear.SetActive(false);
-            //isTeddyVisible = false;
+            isTeddyVisible = false;
+            timePassed = 0;
+            thresholdTime = Random.Range(2.0f, 8.0f);
         }
+
+        else if (timePassed > thresholdTime && isTeddyVisible == false)
+        {
+            teddyBear.SetActive(true);
+            isTeddyVisible = true;
+            timePassed = 0;
+            thresholdTime = Random.Range(2.0f, 8.0f);
+        }
+        
     }
 }
