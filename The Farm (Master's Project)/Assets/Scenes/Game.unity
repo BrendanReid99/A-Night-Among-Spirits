@@ -7894,6 +7894,12 @@ MonoBehaviour:
   - {fileID: 1933813495340862}
   - {fileID: 114354289}
   PPV: {fileID: 506503685}
+  realWorldMask:
+    serializedVersion: 2
+    m_Bits: 23
+  spiritWorldMask:
+    serializedVersion: 2
+    m_Bits: 87
 --- !u!65 &752570189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31701,6 +31707,10 @@ PrefabInstance:
       propertyPath: m_Height
       value: 1.6
       objectReference: {fileID: 0}
+    - target: {fileID: 7252742857163636789, guid: b7ae517300e69864cb342535068ca962, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294897559
+      objectReference: {fileID: 0}
     - target: {fileID: 7554944122877960209, guid: b7ae517300e69864cb342535068ca962, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -32645,6 +32655,12 @@ MonoBehaviour:
   breakerOn: 1
   lightsArray: []
   PPV: {fileID: 0}
+  realWorldMask:
+    serializedVersion: 2
+    m_Bits: 0
+  spiritWorldMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &1835826254
 Animator:
   serializedVersion: 4
