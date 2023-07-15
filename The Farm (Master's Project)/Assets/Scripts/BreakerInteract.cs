@@ -36,7 +36,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
     {
         if(breakerOn == false)
         {
-            Debug.Log("turn breaker on");
+            //Debug.Log("turn breaker on");
             anim.Play("BreakerOn");
             breakerOn = true;
             postProcessVolume.enabled = false;
@@ -45,7 +45,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
         }
         else
         {
-            Debug.Log("turn breaker off");
+            //Debug.Log("turn breaker off");
             anim.Play("BreakerOff");
             breakerOn = false;
             postProcessVolume.enabled = true;

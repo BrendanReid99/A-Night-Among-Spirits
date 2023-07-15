@@ -17,6 +17,10 @@ public class BedSleep : MonoBehaviour, IInteractable
 
     private bool hasSlept = false;
 
+    public GameObject terrainStart;
+    public GameObject terrainClosed;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +67,9 @@ public class BedSleep : MonoBehaviour, IInteractable
         }
 
         fadeBlack.color = targetColor;
+
+        terrainStart.SetActive(false);
+        terrainClosed.SetActive(true);
 
         yield return new WaitForSeconds(2);
 

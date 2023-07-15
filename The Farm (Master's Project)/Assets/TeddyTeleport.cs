@@ -12,7 +12,7 @@ public class TeddyTeleport : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(TeleportTeddy());
+        //StartCoroutine(TeleportTeddy());
     }
 
     // Update is called once per frame
@@ -29,6 +29,17 @@ public class TeddyTeleport : MonoBehaviour
             teddy.transform.rotation = pointsArray[currentIndex].rotation;
 
             yield return new WaitForSeconds(teleportInterval);
+
+            currentIndex = (currentIndex + 1) % pointsArray.Length;
+        }
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            teddy.transform.position = pointsArray[currentIndex].position;
+            teddy.transform.rotation = pointsArray[currentIndex].rotation;
 
             currentIndex = (currentIndex + 1) % pointsArray.Length;
         }
