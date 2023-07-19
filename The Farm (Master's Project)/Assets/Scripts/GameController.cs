@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
     public bool headDownstairs = false;
     public bool checkDoor = false;
 
+    private int flyPapersCollected = 0;
+
     private float fadeDuration = 1f;
 
     public TextMeshProUGUI EnterHouseText;
@@ -21,6 +23,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI InvestigateBangingText;
     public TextMeshProUGUI CheckCarText;
     public TextMeshProUGUI TurnBreakerText;
+    public TextMeshProUGUI FlypaperText;
 
     // Start is called before the first frame update
     void Start()
@@ -237,5 +240,37 @@ public class GameController : MonoBehaviour
 
 
     }
+
+    public void CollectFlypaper()
+    {
+
+        flyPapersCollected++;
+        StartCoroutine(FlypaperCollected());
+    }
+    
+    private IEnumerator FlypaperCollected()
+    {
+        FlypaperText.gameObject.SetActive(true);
+        FlypaperText.text = "You've collected " + flyPapersCollected + " strips of flypaper. Sticky!";
+
+        float elapsedTime = 0f;
+
+        yield return new WaitForSeconds(3);
+
+        Color startColor = FlypaperText.color;
+
+        while(elapsedTime < fadeDuration)
+        {
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            FlypaperText.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+
+        }
+
+        FlypaperText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
+    }
+
 
 }
