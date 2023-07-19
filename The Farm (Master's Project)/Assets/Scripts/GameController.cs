@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI ExploreHouseText;
     public TextMeshProUGUI InvestigateBangingText;
     public TextMeshProUGUI CheckCarText;
+    public TextMeshProUGUI TurnBreakerText;
 
     // Start is called before the first frame update
     void Start()
@@ -74,6 +75,12 @@ public class GameController : MonoBehaviour
         Debug.Log("Objective5");
         StartCoroutine(CheckCar());
         
+    }
+
+    public void Objective6()
+    {
+        Debug.Log("Objective6");
+        StartCoroutine(TurnBreakerOn());
     }
 
     private IEnumerator EnterHouse()
@@ -201,6 +208,32 @@ public class GameController : MonoBehaviour
         }
 
         CheckCarText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
+
+
+    }
+
+    private IEnumerator TurnBreakerOn()
+    {
+        TurnBreakerText.gameObject.SetActive(true);
+
+
+        float elapsedTime = 0f;
+
+        yield return new WaitForSeconds(3);
+
+        Color startColor = TurnBreakerText.color;
+
+        while (elapsedTime < fadeDuration)
+        {
+
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            TurnBreakerText.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        TurnBreakerText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
 
 
     }

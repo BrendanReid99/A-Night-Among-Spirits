@@ -8,9 +8,13 @@ public class BedSleep : MonoBehaviour, IInteractable
 
     public GameObject controller;
     [SerializeField] private GameObject _door;
+    [SerializeField] private GameObject _car;
+    [SerializeField] private GameObject _breaker;
+    private BreakerInteract breaker;
     private GameController gameController;
     Animator anim;
     Animator doorAnim;
+    Animator breakerAnim;
 
     private float fadeDuration = 2f;
     public Image fadeBlack;
@@ -28,6 +32,8 @@ public class BedSleep : MonoBehaviour, IInteractable
         gameController = controller.GetComponent<GameController>();
         anim = controller.GetComponent<Animator>();
         doorAnim = _door.GetComponent<Animator>();
+        breaker = _breaker.GetComponent<BreakerInteract>();
+        breakerAnim = _breaker.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -70,6 +76,11 @@ public class BedSleep : MonoBehaviour, IInteractable
 
         terrainStart.SetActive(false);
         terrainClosed.SetActive(true);
+        _car.SetActive(false);
+        breaker.TurnLightsOff();
+        breaker.stageTwo = true;
+        breaker.breakerOn = false;
+        breakerAnim.Play("BreakerOff");
 
         yield return new WaitForSeconds(2);
 

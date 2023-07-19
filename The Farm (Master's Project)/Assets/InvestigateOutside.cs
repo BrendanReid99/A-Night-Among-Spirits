@@ -13,6 +13,7 @@ public class InvestigateOutside : StateMachineBehaviour
     {
         GameController = GameObject.FindWithTag("GameController");
         controller = GameController.GetComponent<GameController>();
+        controller.Objective5();
         Debug.Log("Objective 5");  
     }
 

@@ -8,6 +8,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
 
     Animator anim;
     public bool breakerOn = true;
+    public bool stageTwo = false;
     [SerializeField] private GameObject[] lightsArray;
     [SerializeField] private GameObject PPV;
     private PostProcessVolume postProcessVolume;
@@ -39,8 +40,12 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             //Debug.Log("turn breaker on");
             anim.Play("BreakerOn");
             breakerOn = true;
-            postProcessVolume.enabled = false;
-            mainCamera.cullingMask = realWorldMask;
+            if(stageTwo == true)
+            {
+                postProcessVolume.enabled = false;
+                mainCamera.cullingMask = realWorldMask;
+            }
+           
             TurnLightsOn();
         }
         else
@@ -48,15 +53,19 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             //Debug.Log("turn breaker off");
             anim.Play("BreakerOff");
             breakerOn = false;
-            postProcessVolume.enabled = true;
-            mainCamera.cullingMask = spiritWorldMask;
+            if(stageTwo == true)
+            {
+                postProcessVolume.enabled = true;
+                mainCamera.cullingMask = spiritWorldMask;
+            }
+            
             TurnLightsOff();
 
 
         }
     }
 
-    private void TurnLightsOff()
+    public void TurnLightsOff()
     {
         foreach (GameObject obj in lightsArray)
         {
@@ -69,7 +78,11 @@ public class BreakerInteract : MonoBehaviour, IInteractable
                 obj.GetComponent<Lightswitch>().TurnLightOff();
             }
         }
-        RenderSettings.ambientIntensity = 2.5f;
+        if(stageTwo == true)
+        {
+            RenderSettings.ambientIntensity = 2.5f;
+        }
+        
     }
 
     private void TurnLightsOn()
