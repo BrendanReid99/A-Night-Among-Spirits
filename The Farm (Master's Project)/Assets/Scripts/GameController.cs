@@ -12,8 +12,10 @@ public class GameController : MonoBehaviour
     public bool bedroom3Open = false;
     public bool headDownstairs = false;
     public bool checkDoor = false;
+    public bool teddyCollected = false;
 
     public int flyPapersCollected = 0;
+    
 
     private float fadeDuration = 1f;
 
@@ -24,6 +26,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI CheckCarText;
     public TextMeshProUGUI TurnBreakerText;
     public TextMeshProUGUI FlypaperText;
+    public TextMeshProUGUI CatchTeddyText;
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +87,14 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("Objective6");
         StartCoroutine(TurnBreakerOn());
+    }
+
+    public void CatchTeddy()
+    {
+        Debug.Log("Teddy Caught");
+        StartCoroutine(TeddyCaught());
+        teddyCollected = true;
+        
     }
 
     private IEnumerator EnterHouse()
@@ -271,6 +282,32 @@ public class GameController : MonoBehaviour
 
         FlypaperText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
     }
+
+    private IEnumerator TeddyCaught()
+    {
+        CatchTeddyText.gameObject.SetActive(true);
+
+
+        float elapsedTime = 0f;
+
+        yield return new WaitForSeconds(3);
+
+        Color startColor = CatchTeddyText.color;
+
+        while (elapsedTime < fadeDuration)
+        {
+
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            CatchTeddyText.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        CatchTeddyText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
+    }
+
+    
 
 
 }

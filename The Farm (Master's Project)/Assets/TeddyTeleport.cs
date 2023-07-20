@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TeddyTeleport : MonoBehaviour
+public class TeddyTeleport : MonoBehaviour, IInteractable
 {
     [SerializeField] private Transform[] pointsArray;
     [SerializeField] private GameObject teddy;
     private float teleportInterval = 20f;
     private int currentIndex = 0;
+    private bool trapped = false;
+
+    [SerializeField] private GameObject gameController;
+    private GameController controller;
+
 
     // Start is called before the first frame update
     void Start()
     {
         //StartCoroutine(TeleportTeddy());
+        controller = gameController.GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -21,6 +27,7 @@ public class TeddyTeleport : MonoBehaviour
         
     }
 
+    /*
     private IEnumerator TeleportTeddy()
     {
         while (true)
@@ -33,15 +40,28 @@ public class TeddyTeleport : MonoBehaviour
             currentIndex = (currentIndex + 1) % pointsArray.Length;
         }
     }
+    */
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player") && trapped == false)
         {
             teddy.transform.position = pointsArray[currentIndex].position;
             teddy.transform.rotation = pointsArray[currentIndex].rotation;
+            if(pointsArray[currentIndex].gameObject.GetComponent<PlaceTrap>().trapActive == true)
+            {
+                trapped = true;
+            }
 
             currentIndex = (currentIndex + 1) % pointsArray.Length;
+        }
+    }
+
+    public void Interact()
+    {
+        if(trapped == true)
+        {
+
         }
     }
 }

@@ -8,6 +8,7 @@ public class PlaceTrap : MonoBehaviour, IInteractable
     [SerializeField] private GameObject gameController;
     private GameController controller;
     [SerializeField] private GameObject trap;
+    public bool trapActive = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,8 @@ public class PlaceTrap : MonoBehaviour, IInteractable
         if(controller.flyPapersCollected == 6)
         {
             trap.SetActive(true);
+            controller.flyPapersCollected = 0;
+            trapActive = true;
         }
     }
 }
