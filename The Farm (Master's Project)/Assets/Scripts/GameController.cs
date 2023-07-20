@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     public bool headDownstairs = false;
     public bool checkDoor = false;
 
-    private int flyPapersCollected = 0;
+    public int flyPapersCollected = 0;
 
     private float fadeDuration = 1f;
 
