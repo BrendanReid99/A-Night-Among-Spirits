@@ -1003,7 +1003,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ebf06d4c2d307d34b88c77df6d50fe6e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teddyBear: {fileID: 999024272}
-  teddyBearVoice: {fileID: 0}
+  teddyBearVoice: {fileID: 1119515397}
   teddyVoice: {fileID: 8300000, guid: ebf06d4c2d307d34b88c77df6d50fe6e, type: 3}
 --- !u!1 &1905514306
 GameObject:
