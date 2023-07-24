@@ -10,6 +10,15 @@ public class TeddyDisappear : MonoBehaviour
     float thresholdTime = 3.0f;
     bool isTeddyVisible = true;
 
+    [SerializeField] private GameObject teddyBearVoice;
+    public AudioClip teddyVoice;
+
+    void Start()
+    {
+        teddyBearVoice.GetComponent<AudioSource>().playOnAwake = false;
+        teddyBearVoice.GetComponent<AudioSource>().clip = teddyVoice;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +37,7 @@ public class TeddyDisappear : MonoBehaviour
             isTeddyVisible = true;
             timePassed = 0;
             thresholdTime = Random.Range(2.0f, 8.0f);
+            teddyBearVoice.GetComponent<AudioSource>().Play();
         }
         
     }
