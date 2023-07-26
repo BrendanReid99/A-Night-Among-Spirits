@@ -11,6 +11,8 @@ public class ItemInteraction : MonoBehaviour
     [SerializeField] private GameObject gameController;
     private GameController controller;
     [SerializeField] private TextMeshProUGUI TrapText;
+    [SerializeField] private GameObject _crossHair;
+    private bool _isCrossHairActive = false;
     private bool textActive = false;
 
     private void Start()
@@ -21,21 +23,48 @@ public class ItemInteraction : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
+        //if (Input.GetKeyDown(KeyCode.E))
+        
             RaycastHit hit;
             Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 
             if (Physics.Raycast(ray, out hit, interactionDistance))
             {
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+
                 if (interactable != null)
                 {
-                    interactable.Interact();
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        interactable.Interact();
+                    }
+
+                    CrossHairActive();                
+                }
+
+                if (controller.flyPapersCollected == 6 && hit.collider.CompareTag("TrapPoints"))
+                {
+                    TrapText.gameObject.SetActive(true);
+                    textActive = true;
+
+                    
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        if (interactable != null)
+                        {
+                            interactable.Interact();
+                        }
+                    }
+                    
+                }
+                else if (textActive == true)
+                {
+                    TrapText.gameObject.SetActive(false);
+                    textActive = false;
                 }
             }
-        }
-
+        
+        /*
         if(controller.flyPapersCollected == 6)
         {
             RaycastHit hit;
@@ -69,6 +98,11 @@ public class ItemInteraction : MonoBehaviour
             }
 
             //TrapText.gameObject.SetActive(false);
-        }
+        }*/
+    }
+
+    private void CrossHairActive()
+    {
+
     }
 }
