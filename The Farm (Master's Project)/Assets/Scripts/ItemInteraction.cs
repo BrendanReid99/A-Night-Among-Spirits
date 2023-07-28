@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ItemInteraction : MonoBehaviour
 {
@@ -12,13 +13,15 @@ public class ItemInteraction : MonoBehaviour
     private GameController controller;
     [SerializeField] private TextMeshProUGUI TrapText;
     [SerializeField] private GameObject _crossHair;
-    private bool _isCrossHairActive = false;
+    
+    
     private bool textActive = false;
 
     private void Start()
     {
         mainCamera = Camera.main;
         controller = gameController.GetComponent<GameController>();
+        
     }
 
     private void Update()
@@ -39,7 +42,7 @@ public class ItemInteraction : MonoBehaviour
                         interactable.Interact();
                     }
 
-                    CrossHairActive();                
+                           
                 }
 
                 if (controller.flyPapersCollected == 6 && hit.collider.CompareTag("TrapPoints"))
@@ -62,6 +65,8 @@ public class ItemInteraction : MonoBehaviour
                     TrapText.gameObject.SetActive(false);
                     textActive = false;
                 }
+                
+               
             }
         
         /*
@@ -101,8 +106,5 @@ public class ItemInteraction : MonoBehaviour
         }*/
     }
 
-    private void CrossHairActive()
-    {
-
-    }
+    
 }
