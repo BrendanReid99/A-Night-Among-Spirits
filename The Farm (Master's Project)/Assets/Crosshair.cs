@@ -7,7 +7,7 @@ public class Crosshair : MonoBehaviour
 {
 
     private float interactionDistance = 2f;
-    private Camera mainCamera;
+    [SerializeField] private Camera mainCamera;
 
     [SerializeField] private GameObject _crossHairObject;
     private Image _crossHair;
@@ -15,7 +15,7 @@ public class Crosshair : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCamera = Camera.main;
+        //mainCamera = Camera.main;
         _crossHair = _crossHairObject.GetComponent<Image>();
     }
 

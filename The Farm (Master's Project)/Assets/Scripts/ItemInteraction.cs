@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ItemInteraction : MonoBehaviour
 {
     private float interactionDistance = 2f;
-    private Camera mainCamera;
+    [SerializeField] private Camera mainCamera;
 
     [SerializeField] private GameObject gameController;
     private GameController controller;
@@ -19,7 +19,7 @@ public class ItemInteraction : MonoBehaviour
 
     private void Start()
     {
-        mainCamera = Camera.main;
+        //mainCamera = Camera.main;
         controller = gameController.GetComponent<GameController>();
         
     }
