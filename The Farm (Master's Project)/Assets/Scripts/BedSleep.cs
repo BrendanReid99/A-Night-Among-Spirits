@@ -77,9 +77,10 @@ public class BedSleep : MonoBehaviour, IInteractable
         terrainStart.SetActive(false);
         terrainClosed.SetActive(true);
         _car.SetActive(false);
-        breaker.TurnLightsOff();
+        //breaker.TurnLightsOff();
+        breaker.Interact();
         breaker.stageTwo = true;
-        breaker.breakerOn = false;
+        //breaker.breakerOn = false;
         breakerAnim.Play("BreakerOff");
 
         yield return new WaitForSeconds(2);

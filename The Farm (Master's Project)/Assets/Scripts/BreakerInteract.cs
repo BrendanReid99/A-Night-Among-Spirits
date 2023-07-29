@@ -42,8 +42,8 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             breakerOn = true;
             if(stageTwo == true)
             {
-                postProcessVolume.enabled = false;
-                mainCamera.cullingMask = realWorldMask;
+                postProcessVolume.enabled = true;
+                mainCamera.cullingMask = spiritWorldMask;
             }
            
             TurnLightsOn();
@@ -55,8 +55,8 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             breakerOn = false;
             if(stageTwo == true)
             {
-                postProcessVolume.enabled = true;
-                mainCamera.cullingMask = spiritWorldMask;
+                postProcessVolume.enabled = false;
+                mainCamera.cullingMask = realWorldMask;
             }
             
             TurnLightsOff();
