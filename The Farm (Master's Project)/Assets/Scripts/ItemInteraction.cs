@@ -33,6 +33,9 @@ public class ItemInteraction : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, interactionDistance))
             {
+
+            Debug.Log("Raycast Hit");
+
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
                 if (interactable != null)

@@ -27,10 +27,13 @@ public class Crosshair : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, interactionDistance))
         {
+            Debug.Log(hit.collider.gameObject);
+
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
             if (interactable != null)
             {
+                Debug.Log("Crosshair go WHITE");
                 _crossHair.color = Color.white;
 
             }
