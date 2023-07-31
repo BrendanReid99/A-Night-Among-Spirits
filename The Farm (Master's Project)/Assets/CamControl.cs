@@ -19,7 +19,7 @@ public class CamControl : MonoBehaviour
         offset = transform.position - target.position;
     }
 
-    void LateUpdate()
+    void Update()
     {
         // Calculate the target position for the cameras
         Vector3 targetPosition = target.position + offset;

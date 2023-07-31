@@ -22,8 +22,12 @@ public class Crosshair : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
+        //Debug.DrawRay(transform.position, forward, Color.green);
+
         RaycastHit hit;
         Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
 
         if (Physics.Raycast(ray, out hit, interactionDistance))
         {
