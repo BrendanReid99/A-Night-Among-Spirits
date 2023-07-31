@@ -23,8 +23,8 @@ public class PickupLamp : MonoBehaviour, IInteractable
     public void Interact()
     {
         playerLamp.gameObject.SetActive(true);
-        
-        
-        roomLamp.SetActive(false);
+        Debug.Log("Interacting");
+
+        Destroy(roomLamp); 
     }
 }
