@@ -65,4 +65,19 @@ public class Bedroom2Door : MonoBehaviour, IInteractable
 
 
     }
+
+    public void SpiritWorld(bool status)
+    {
+        if(status == true)
+        {
+            anim.Play("Door1 open");
+        }
+
+        if(status == false)
+        {
+            anim.Play("Door1 close");
+        }
+    }
+
+
 }

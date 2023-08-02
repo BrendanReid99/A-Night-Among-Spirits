@@ -11,6 +11,9 @@ public class BreakerInteract : MonoBehaviour, IInteractable
     public bool stageTwo = false;
     [SerializeField] private GameObject[] lightsArray;
     [SerializeField] private GameObject PPV;
+    [SerializeField] private GameObject bedroom2Door;
+    private Bedroom2Door doorScript;
+
     private PostProcessVolume postProcessVolume;
 
     public LayerMask realWorldMask;
@@ -25,6 +28,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
         anim = this.GetComponent<Animator>();
         postProcessVolume = PPV.GetComponent<PostProcessVolume>();
         mainCamera = Camera.main;
+        doorScript = bedroom2Door.GetComponent<Bedroom2Door>();
     }
 
     // Update is called once per frame
@@ -44,6 +48,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             {
                 postProcessVolume.enabled = true;
                 mainCamera.cullingMask = spiritWorldMask;
+                doorScript.SpiritWorld(true);
             }
            
             TurnLightsOn();
@@ -57,6 +62,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             {
                 postProcessVolume.enabled = false;
                 mainCamera.cullingMask = realWorldMask;
+                doorScript.SpiritWorld(false);
             }
             
             TurnLightsOff();
