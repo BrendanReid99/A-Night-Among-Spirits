@@ -7,9 +7,11 @@ public class MyCharacterController : MonoBehaviour
     public float movementSpeed = 5f;
     public float mouseSensitivity = 100f;
     public float damping = 6f; // Adjust this value to control the damping strength
+    public float gravity = 9.81f;
 
     private float verticalRotation = 0f;
     private CharacterController characterController;
+    private Vector3 playerVelocity;
 
     void Start()
     {
@@ -50,6 +52,25 @@ public class MyCharacterController : MonoBehaviour
 
         // Apply movement to the character controller
         characterController.Move(moveDirection * movementSpeed * Time.fixedDeltaTime);
+
+        ApplyGravity();
     }
-    
+
+    void ApplyGravity()
+    {
+        if (!characterController.isGrounded)
+        {
+            // Apply gravity to the player velocity
+            playerVelocity.y -= gravity * Time.fixedDeltaTime;
+
+            // Apply the velocity to the character controller
+            characterController.Move(playerVelocity * Time.fixedDeltaTime);
+        }
+        else
+        {
+            // Reset the vertical velocity when grounded
+            playerVelocity.y = 0f;
+        }
+    }
+
 }
