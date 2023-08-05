@@ -61,7 +61,9 @@ public class TeddyTeleport : MonoBehaviour, IInteractable
     {
         if(trapped == true)
         {
-
+            controller.teddyCollected = true;
+            Destroy(this);
         }
+
     }
 }
