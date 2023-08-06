@@ -37,9 +37,17 @@ public class TeddyQuest : MonoBehaviour
                 panel.SetActive(false);
             }
         }
+        else if (questStage == 2)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                panel.SetActive(false);
+            }
+        }
         if(controller.teddyCollected == true)
         {
             questStage = 2;
+            
         }
     }
 
