@@ -42,12 +42,12 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             currentObjective = textArray[arrayPosition];
             currentObjective.gameObject.SetActive(true);
         }
-        if (!Input.GetKey(KeyCode.Tab))
+        if (Input.GetKeyUp(KeyCode.Tab))
         {
             currentObjective.gameObject.SetActive(false);
         }
@@ -138,6 +138,8 @@ public class GameController : MonoBehaviour
 
         EnterHouseText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
 
+        EnterHouseText.gameObject.SetActive(false);
+        EnterHouseText.color = startColor;
 
     }
 
@@ -166,6 +168,10 @@ public class GameController : MonoBehaviour
 
         FindBedroomKeyText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
 
+        FindBedroomKeyText.gameObject.SetActive(false);
+        FindBedroomKeyText.color = startColor;
+
+
     }
 
     private IEnumerator ExploreHouse()
@@ -191,6 +197,9 @@ public class GameController : MonoBehaviour
         }
 
         ExploreHouseText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
+
+        ExploreHouseText.gameObject.SetActive(false);
+        ExploreHouseText.color = startColor;
     }
 
     private IEnumerator InvestigateBanging()
@@ -216,6 +225,9 @@ public class GameController : MonoBehaviour
         }
 
         InvestigateBangingText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
+
+        InvestigateBangingText.gameObject.SetActive(false);
+        InvestigateBangingText.color = startColor;
     }
 
     private IEnumerator CheckCar()
@@ -241,6 +253,8 @@ public class GameController : MonoBehaviour
 
         CheckCarText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
 
+        CheckCarText.gameObject.SetActive(false);
+        CheckCarText.color = startColor;
 
     }
 
@@ -267,7 +281,8 @@ public class GameController : MonoBehaviour
 
         TurnBreakerText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
 
-
+        TurnBreakerText.gameObject.SetActive(false);
+        TurnBreakerText.color = startColor;
     }
 
     public void CollectFlypaper()
