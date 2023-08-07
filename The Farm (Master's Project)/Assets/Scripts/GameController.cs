@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentObjective = textArray[arrayPosition];
     }
 
     // Update is called once per frame
@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
 
     public void Objective1()
     {
+        
         Debug.Log("Objective1");
         StartCoroutine(EnterHouse());
     }
