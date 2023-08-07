@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TeddyTeleport : MonoBehaviour, IInteractable
 {
@@ -62,7 +63,8 @@ public class TeddyTeleport : MonoBehaviour, IInteractable
         if(trapped == true)
         {
             controller.teddyCollected = true;
-            Destroy(this);
+            controller.CatchTeddy();
+            Destroy(teddy);
         }
 
     }

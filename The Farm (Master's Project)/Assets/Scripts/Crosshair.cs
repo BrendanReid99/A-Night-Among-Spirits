@@ -27,17 +27,17 @@ public class Crosshair : MonoBehaviour
 
         RaycastHit hit;
         Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-        Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
+        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
 
         if (Physics.Raycast(ray, out hit, interactionDistance))
         {
-            Debug.Log(hit.collider.gameObject);
+            //Debug.Log(hit.collider.gameObject);
 
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
             if (interactable != null)
             {
-                Debug.Log("Crosshair go WHITE");
+                //Debug.Log("Crosshair go WHITE");
                 _crossHair.color = Color.white;
 
             }
