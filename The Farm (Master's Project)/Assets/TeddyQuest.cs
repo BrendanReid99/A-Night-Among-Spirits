@@ -13,6 +13,7 @@ public class TeddyQuest : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI QuestText;
     [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject tbcPanel;
 
     public int questStage = 0;
 
@@ -87,5 +88,18 @@ public class TeddyQuest : MonoBehaviour
     {
         panel.SetActive(true);
         QuestText.text = "Yayy! Thank you!";
+        StartCoroutine(tbcPanelShow());
+    }
+
+
+    public IEnumerator tbcPanelShow()
+    {
+        yield return new WaitForSeconds(2);
+
+        tbcPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        Time.timeScale = 0;
     }
 }
