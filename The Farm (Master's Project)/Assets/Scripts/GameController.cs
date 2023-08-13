@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
     private int arrayPosition = 0;
 
     [SerializeField] private GameObject chase1;
-    [SerializeField] private GameObject chase2;
+    
 
 
     // Start is called before the first frame update
@@ -353,9 +353,9 @@ public class GameController : MonoBehaviour
         CatchTeddyText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
     }
 
-    private void SpawnChase1()
+    public void SpawnChase1()
     {
-
+        chase1.SetActive(true);
     }
 
 

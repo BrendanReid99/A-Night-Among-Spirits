@@ -6,7 +6,9 @@ public class ChildChase1 : MonoBehaviour
 {
 
     [SerializeField] private GameObject NPC;
+    [SerializeField] private GameObject NPC2;
     private Animator anim;
+    private bool firstDone = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,15 @@ public class ChildChase1 : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
+        if(firstDone == true)
+        {
+            NPC2.SetActive(true);
+        }
         StartCoroutine(RunAway());
+        if(firstDone == false)
+        {
+            firstDone = true;
+        }
     }
 
     private IEnumerator RunAway()

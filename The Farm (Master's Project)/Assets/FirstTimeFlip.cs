@@ -14,6 +14,8 @@ public class FirstTimeFlip : StateMachineBehaviour
     {
         GameController = GameObject.FindWithTag("GameController");
         controller = GameController.GetComponent<GameController>();
+
+        controller.SpawnChase1();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
