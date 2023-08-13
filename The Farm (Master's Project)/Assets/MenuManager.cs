@@ -11,6 +11,8 @@ public class MenuManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) {
             pauseMenu.gameObject.SetActive(true);
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

@@ -8,9 +8,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseCanvas;
 
     public void resumeGame() { 
-        pauseCanvas.SetActive(false);
+        
         Time.timeScale = 1;
         Debug.Log("resume game clicked");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        pauseCanvas.SetActive(false);
     }
 
     public void exitGame() { 
