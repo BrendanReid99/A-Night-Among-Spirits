@@ -8,6 +8,7 @@ TagManager:
   - Camera Pivot
   - BasementLight
   - TrapPoints
+  - NPC_Chase_1
   layers:
   - Default
   - TransparentFX

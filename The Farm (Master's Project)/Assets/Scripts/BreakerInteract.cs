@@ -12,7 +12,12 @@ public class BreakerInteract : MonoBehaviour, IInteractable
     [SerializeField] private GameObject[] lightsArray;
     [SerializeField] private GameObject PPV;
     [SerializeField] private GameObject bedroom2Door;
+    [SerializeField] private GameObject controllerHolder;
     private Bedroom2Door doorScript;
+
+    private GameController controller;
+    private Animator controllerAnim;
+
 
     private PostProcessVolume postProcessVolume;
 
@@ -29,6 +34,8 @@ public class BreakerInteract : MonoBehaviour, IInteractable
         postProcessVolume = PPV.GetComponent<PostProcessVolume>();
         mainCamera = Camera.main;
         doorScript = bedroom2Door.GetComponent<Bedroom2Door>();
+        controller = controllerHolder.GetComponent<GameController>();
+        controllerAnim = controllerHolder.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,6 +56,8 @@ public class BreakerInteract : MonoBehaviour, IInteractable
                 postProcessVolume.enabled = true;
                 mainCamera.cullingMask = spiritWorldMask;
                 doorScript.SpiritWorld(true);
+                controllerAnim.SetTrigger("FindBreakerExit");
+                controllerAnim.SetTrigger("OtherSide");
             }
            
             TurnLightsOn();
@@ -63,6 +72,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
                 postProcessVolume.enabled = false;
                 mainCamera.cullingMask = realWorldMask;
                 doorScript.SpiritWorld(false);
+                controllerAnim.SetTrigger("RealSide");
             }
             
             TurnLightsOff();

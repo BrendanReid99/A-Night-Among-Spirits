@@ -33,6 +33,10 @@ public class GameController : MonoBehaviour
     [SerializeField] public TextMeshProUGUI[] textArray;
     private int arrayPosition = 0;
 
+    [SerializeField] private GameObject chase1;
+    [SerializeField] private GameObject chase2;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,28 +69,28 @@ public class GameController : MonoBehaviour
 
     public void Objective1()
     {
-        
+        arrayPosition = 0;
         Debug.Log("Objective1");
         StartCoroutine(EnterHouse());
     }
 
     public void Objective2()
     {
-        arrayPosition++;
+        arrayPosition = 1;
         Debug.Log("Objective2");
         StartCoroutine(FindBedroomKey());
     }
 
     public void Objective3()
     {
-        arrayPosition++;
+        arrayPosition = 2;
         Debug.Log("Objective3");
         StartCoroutine(ExploreHouse());
     }
 
     public void Objective4()
     {
-        arrayPosition++;
+        arrayPosition = 3;
         Debug.Log("Objective4");
         StartCoroutine(InvestigateBanging());
         headDownstairs = true;
@@ -95,7 +99,7 @@ public class GameController : MonoBehaviour
 
     public void Objective5()
     {
-        arrayPosition++;
+        arrayPosition = 4;
         Debug.Log("Objective5");
         StartCoroutine(CheckCar());
         
@@ -103,7 +107,7 @@ public class GameController : MonoBehaviour
 
     public void Objective6()
     {
-        arrayPosition++;
+        arrayPosition = 5;
         Debug.Log("Objective6");
         StartCoroutine(TurnBreakerOn());
     }
@@ -349,7 +353,10 @@ public class GameController : MonoBehaviour
         CatchTeddyText.color = new Color(startColor.r, startColor.g, startColor.b, 0f);
     }
 
-    
+    private void SpawnChase1()
+    {
+
+    }
 
 
 }
