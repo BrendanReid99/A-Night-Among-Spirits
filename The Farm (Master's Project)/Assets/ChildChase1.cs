@@ -26,17 +26,14 @@ public class ChildChase1 : MonoBehaviour
     {
         
         StartCoroutine(RunAway());
-        if(firstDone == false)
-        {
-            NPC2.SetActive(true);
-            firstDone = true;
-        }
+        
     }
 
     private IEnumerator RunAway()
     {
         anim.Play("NPC_Chase_1");
         yield return new WaitForSeconds(2.5f);
+        NPC2.SetActive(true);
         Destroy(NPC);
     }
 }
