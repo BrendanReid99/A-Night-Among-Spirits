@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public void resumeGame() { 
         pauseCanvas.SetActive(false);
         Time.timeScale = 1;
+        Debug.Log("resume game clicked");
     }
 
     public void exitGame() { 
