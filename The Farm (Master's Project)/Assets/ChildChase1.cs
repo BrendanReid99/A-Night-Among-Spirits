@@ -24,13 +24,11 @@ public class ChildChase1 : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        if(firstDone == true)
-        {
-            NPC2.SetActive(true);
-        }
+        
         StartCoroutine(RunAway());
         if(firstDone == false)
         {
+            NPC2.SetActive(true);
             firstDone = true;
         }
     }
