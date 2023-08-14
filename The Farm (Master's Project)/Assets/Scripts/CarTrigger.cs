@@ -23,6 +23,10 @@ public class CarTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        anim.SetTrigger("InvestigateOutsideExit");
+        if(gameController.headDownstairs == true)
+        {
+            anim.SetTrigger("InvestigateOutsideExit");
+        }
+        
     }
 }
