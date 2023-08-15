@@ -26,15 +26,18 @@ public class ItemInteraction : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.E))
         
+            //Fires raycast from the middle of the screen (same placement as crosshair).
+            //Raycast returns objects it hits within interaction distance.
+            //If said object calls the interactable interface, then E can be pressed and it will call the Interact() function on that object.
+
             RaycastHit hit;
             Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 
             if (Physics.Raycast(ray, out hit, interactionDistance))
             {
 
-            Debug.Log("Raycast Hit");
+            
 
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
@@ -47,8 +50,12 @@ public class ItemInteraction : MonoBehaviour
 
                            
                 }
+                
 
-                if (controller.flyPapersCollected == 6 && hit.collider.CompareTag("TrapPoints"))
+                //Checks if the player has collected enough flypaper to make a trap, and if the raycasted obj is a trap point.
+                //If so, displays text to tell the player they can place the trap with F.
+                //Text disappears when no longer raycasting to that obj.
+                if (controller.flyPapersCollected == 3 && hit.collider.CompareTag("TrapPoints"))
                 {
                     TrapText.gameObject.SetActive(true);
                     textActive = true;
@@ -72,41 +79,6 @@ public class ItemInteraction : MonoBehaviour
                
             }
         
-        /*
-        if(controller.flyPapersCollected == 6)
-        {
-            RaycastHit hit;
-            Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-
-            if(Physics.Raycast(ray, out hit, interactionDistance))
-            {
-                IInteractable interactable = hit.collider.GetComponent<IInteractable>();
-
-
-                if (hit.collider.CompareTag("TrapPoints"))
-                {
-                    TrapText.gameObject.SetActive(true);
-                    textActive = true;
-                    if (Input.GetKeyDown(KeyCode.F))
-                    {
-                        if(interactable != null)
-                        {
-                            interactable.Interact();
-                        }
-                    }
-                    
-                }
-                else if(textActive == true)
-                {
-                    
-                    TrapText.gameObject.SetActive(false);
-                    textActive = false;
-                }
-
-            }
-
-            //TrapText.gameObject.SetActive(false);
-        }*/
     }
 
     

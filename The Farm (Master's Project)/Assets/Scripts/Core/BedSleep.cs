@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BedSleep : MonoBehaviour, IInteractable
 {
-
+    //Variable assignments
     public GameObject controller;
     [SerializeField] private GameObject _door;
     [SerializeField] private GameObject _car;
@@ -62,6 +62,8 @@ public class BedSleep : MonoBehaviour, IInteractable
 
         float timer = 0f;
 
+
+        //Smoothly fades to black over fadeDuration
         while (timer < fadeDuration)
         {
             timer += Time.deltaTime;
@@ -78,6 +80,7 @@ public class BedSleep : MonoBehaviour, IInteractable
         terrainClosed.SetActive(true);
         _car.SetActive(false);
         
+        //Breaker turning off + the required actions to keep it in the correct state.
         breaker.Interact();
         breaker.stageTwo = true;
         breaker.breakerOn = false;
@@ -89,6 +92,7 @@ public class BedSleep : MonoBehaviour, IInteractable
         
         anim.SetTrigger("GoToBedExit");
 
+        //Smoothly fades the black out over fadeDuration
         while (timer < fadeDuration)
         {
             timer += Time.deltaTime;

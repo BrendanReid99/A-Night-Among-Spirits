@@ -5,7 +5,7 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class BreakerInteract : MonoBehaviour, IInteractable
 {
-
+    //Variable assignments
     Animator anim;
     public bool breakerOn = true;
     public bool stageTwo = false;
@@ -46,6 +46,9 @@ public class BreakerInteract : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        //If breaker is interacted with and is currently OFF, turns breaker ON. If game state is in stage two (after sleeping), also enables the 'Other Side' post-processing, as well as 'Other Side' culling mask.
+        //Additionally sets some state machine triggers and opens upstairs bedroom door.
+        //Runs the opposite way if breaker is currently ON (e.g. turns breaker off, disables 'Other Side' aspects).
         if(breakerOn == false)
         {
             //Debug.Log("turn breaker on");
@@ -81,6 +84,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
         }
     }
 
+    //Iterates through each light in the array, turning them off. Additionally sets ambient light to 2.5 so game isn't in complete darkness.
     public void TurnLightsOff()
     {
         foreach (GameObject obj in lightsArray)
@@ -101,6 +105,7 @@ public class BreakerInteract : MonoBehaviour, IInteractable
         
     }
 
+    //Iterates through each light in the array as well as their lightswitches. Turns lights on if their lightswitch is set to on, so that lights that were on before breaker was flipped can go back on.
     private void TurnLightsOn()
     {
         foreach (GameObject obj in lightsArray)

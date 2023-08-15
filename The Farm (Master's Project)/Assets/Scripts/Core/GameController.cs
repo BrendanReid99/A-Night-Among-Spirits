@@ -5,7 +5,7 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-
+    //Variable assignments
     public bool playerBedroomKey = false;
     public bool basementDoorKey = false;
     public bool bedroom2Open = false;
@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour
         currentObjective = textArray[arrayPosition];
     }
 
-    // Update is called once per frame
+    // Checks for if Tab is being held down or not to determine if the current objective should be displayed.
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -67,6 +67,8 @@ public class GameController : MonoBehaviour
         basementDoorKey = true;
     }
 
+
+    //Used for setting the objective and objective text. Starts coroutine for text appear + fade.
     public void Objective1()
     {
         arrayPosition = 0;
@@ -120,6 +122,8 @@ public class GameController : MonoBehaviour
         
     }
 
+    //Standard coroutine for displaying objective text and fading it out. Sets alpha of text to 1 then fades it to 0.
+    //Disables text object at end of coroutine.
     private IEnumerator EnterHouse()
     {
         EnterHouseText.gameObject.SetActive(true);
