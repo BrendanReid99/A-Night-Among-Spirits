@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorInteract : MonoBehaviour, IInteractable
 {
-
+    //Variable assignments
     Animator anim;
     private bool doorOpen = false;
 
@@ -13,6 +13,7 @@ public class DoorInteract : MonoBehaviour, IInteractable
         anim = this.GetComponent<Animator>();
     }
 
+    //Opens or closes door when interacted with, depending on its current state. Applies to doors without locks (e.g. dining room door)
    public void Interact()
     {
         if(doorOpen == false)

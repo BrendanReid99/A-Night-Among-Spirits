@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CableCreator : MonoBehaviour
 {
+    //Variable assignment
     public Transform startPoint;
     public Transform endPoint;
     public int numSegments = 20;
@@ -16,6 +17,7 @@ public class CableCreator : MonoBehaviour
         CreateCable();
     }
 
+    //Uses the LineRenderer component to draw a line between two points with x segments. 
     private void CreateCable()
     {
         lineRenderer.positionCount = numSegments + 1;

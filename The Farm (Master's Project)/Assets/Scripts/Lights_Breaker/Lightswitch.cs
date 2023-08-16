@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lightswitch : MonoBehaviour, IInteractable
 {
-
+    //Variable assignment
     [SerializeField] private GameObject _switch;
     [SerializeField] private GameObject breaker;
     private BreakerInteract breakerInteract;
@@ -24,7 +24,8 @@ public class Lightswitch : MonoBehaviour, IInteractable
     {
         
     }
-
+    
+    //Turns light on or off, depending on switch state and breaker state.
     public void Interact()
     {
         if (switchOn == false)
@@ -45,6 +46,8 @@ public class Lightswitch : MonoBehaviour, IInteractable
             }
         }
     }
+
+    // These methods are for the breaker to call when interacting with breaker.
 
     public void TurnLightOn()
     {

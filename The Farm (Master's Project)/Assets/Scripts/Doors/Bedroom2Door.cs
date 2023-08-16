@@ -5,7 +5,7 @@ using TMPro;
 
 public class Bedroom2Door : MonoBehaviour, IInteractable
 {
-
+    //Variable assignments
     public GameObject controller;
     private GameController gameController;
     public TextMeshProUGUI locked;
@@ -20,6 +20,8 @@ public class Bedroom2Door : MonoBehaviour, IInteractable
         gameController = controller.GetComponent<GameController>();
     }
 
+    //Opens door if bedroom 2 key has been collected, shows 'locked' text if not.
+    //Kind of defunct given bedroom 2 and 3 keys aren't in-game currently.
     public void Interact()
     {
         if (gameController.bedroom2Open == true)
@@ -42,6 +44,7 @@ public class Bedroom2Door : MonoBehaviour, IInteractable
         Debug.Log("Working");
     }
 
+    //Displays 'locked' text if interacted with while locked.
     private IEnumerator doorLocked()
     {
         locked.gameObject.SetActive(true);
@@ -66,6 +69,7 @@ public class Bedroom2Door : MonoBehaviour, IInteractable
 
     }
 
+    //Opens door when player enters spirit world, closes when they leave.
     public void SpiritWorld(bool status)
     {
         if(status == true)

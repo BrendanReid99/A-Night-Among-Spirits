@@ -5,6 +5,7 @@ using TMPro;
 
 public class BedroomKey : MonoBehaviour, IInteractable
 {
+    //Variable assignments
     public GameObject controller;
     private GameController gameController;
 
@@ -19,7 +20,7 @@ public class BedroomKey : MonoBehaviour, IInteractable
         gameController = controller.GetComponent<GameController>();
     }
 
-
+    //'picks up' the key when interacted with, disables mesh of tag and destroys child (key is child of tag).
     public void Interact()
     {
         Debug.Log("Bedroom Key Picked Up");
@@ -30,6 +31,7 @@ public class BedroomKey : MonoBehaviour, IInteractable
         
     }
 
+    //Displays text indicating key has been picked up, destroys the entire key object at the end.
     private IEnumerator keyPickup()
     {
         bedroomKeyPickup.gameObject.SetActive(true);

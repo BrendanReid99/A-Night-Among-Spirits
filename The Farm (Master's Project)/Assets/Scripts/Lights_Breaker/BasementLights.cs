@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Maybe change this to arrays at some point and run a foreach through it.
+//Separate script from other lights as 1 switch controls multiple lights.
+//Changing to arrays could allow just for one script (running a foreach through an array of 1 would be virtually the same as the normal script).
+
 public class BasementLights : MonoBehaviour, IInteractable
 {
+    //Variable assignment
     [SerializeField] private GameObject _light0;
     [SerializeField] private GameObject _light1;
     [SerializeField] private GameObject _light2;
@@ -41,6 +47,7 @@ public class BasementLights : MonoBehaviour, IInteractable
 
     }
 
+    //Turns lights on and off based on switch state and breaker state.
     public void Interact()
     {
         Debug.Log("interact");
@@ -84,6 +91,9 @@ public class BasementLights : MonoBehaviour, IInteractable
             }
         }
     }
+
+
+    // These methods are for the breaker to call when interacting with breaker.
 
     public void TurnLightOn()
     {

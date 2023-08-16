@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//THIS IS FOR FRONT DOOR ONLY
+
 public class isDoorOpen : MonoBehaviour, IInteractable
 {
+    //Variable assignments
     private GameController gameController;
     public GameObject controller;
     private bool doorOpen = false;
@@ -24,6 +27,7 @@ public class isDoorOpen : MonoBehaviour, IInteractable
         
     }
 
+    //Opens or closes door depending on its current state, also triggers one of the objective states at a certain point in the game.
     public void Interact()
     {
 

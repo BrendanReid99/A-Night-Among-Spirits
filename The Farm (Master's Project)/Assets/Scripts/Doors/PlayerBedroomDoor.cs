@@ -5,7 +5,7 @@ using TMPro;
 
 public class PlayerBedroomDoor : MonoBehaviour, IInteractable
 {
-
+    //Variable assignments
     public GameObject controller;
     private GameController gameController;
     public TextMeshProUGUI locked;
@@ -24,6 +24,7 @@ public class PlayerBedroomDoor : MonoBehaviour, IInteractable
         controlAnim = controller.GetComponent<Animator>();
     }
 
+    //Opens door if bedroom key is obtained, shows 'door is locked' text if not.
     public void Interact()
     {
         if (gameController.playerBedroomKey == true) {
@@ -55,6 +56,7 @@ public class PlayerBedroomDoor : MonoBehaviour, IInteractable
         Debug.Log("Working");
     }
 
+    //Displays 'door locked' text and triggers state to 'find bedroom key'.
     private IEnumerator doorLocked()
     {
         locked.gameObject.SetActive(true);

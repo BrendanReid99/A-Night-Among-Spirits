@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//TEMPORARY SOLUTION - Will make it more immersive if time allows
+
 public class BoundaryTrigger : MonoBehaviour
 {
-
+    //Variable assignments
     [SerializeField] private GameObject respawnPoint;
     private GameObject player;
     private Vector3 targetpos;
@@ -16,6 +18,7 @@ public class BoundaryTrigger : MonoBehaviour
         targetpos = respawnPoint.transform.position;
     }
 
+    //If player exits boundary box, they're teleported back to entrance of the house.
     private void OnTriggerExit(Collider collider)
     {
         Debug.Log("Exit");

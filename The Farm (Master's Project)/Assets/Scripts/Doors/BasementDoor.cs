@@ -5,7 +5,7 @@ using TMPro;
 
 public class BasementDoor : MonoBehaviour, IInteractable
 {
-
+    //Variable assignments
     public GameObject controller;
     private GameController gameController;
     public TextMeshProUGUI locked;
@@ -20,6 +20,7 @@ public class BasementDoor : MonoBehaviour, IInteractable
         gameController = controller.GetComponent<GameController>();
     }
 
+    //Opens door if the basement door key has been collected - displays 'locked' text if not.
     public void Interact()
     {
         if (gameController.basementDoorKey == true)
@@ -42,6 +43,7 @@ public class BasementDoor : MonoBehaviour, IInteractable
         Debug.Log("Working");
     }
 
+    //Displays 'locked' text if door is interacted with while locked.
     private IEnumerator doorLocked()
     {
         locked.gameObject.SetActive(true);

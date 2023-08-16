@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+//FOR BASEMENT DOORS - ALL LOCKED
+
 public class LockedDoor : MonoBehaviour, IInteractable
 {
 
-    
+    //Variable assignments
     public TextMeshProUGUI locked;
     private float fadeDuration = 4f;
 
@@ -16,6 +18,7 @@ public class LockedDoor : MonoBehaviour, IInteractable
        
     }
 
+    //Displays 'locked' text when door is interacted with.
     public void Interact()
     { 
         StartCoroutine(doorLocked());
