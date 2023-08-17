@@ -13,6 +13,8 @@ public class BreakerInteract : MonoBehaviour, IInteractable
     [SerializeField] private GameObject PPV;
     [SerializeField] private GameObject bedroom2Door;
     [SerializeField] private GameObject controllerHolder;
+    [SerializeField] private Material realSky;
+    [SerializeField] private Material spiritSky;
     private Bedroom2Door doorScript;
 
     private GameController controller;
@@ -58,6 +60,8 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             {
                 postProcessVolume.enabled = true;
                 mainCamera.cullingMask = spiritWorldMask;
+                RenderSettings.fogDensity = 0.1f;
+                RenderSettings.skybox = spiritSky;
                 doorScript.SpiritWorld(true);
                 controllerAnim.SetTrigger("FindBreakerExit");
                 controllerAnim.SetTrigger("OtherSide");
@@ -74,6 +78,8 @@ public class BreakerInteract : MonoBehaviour, IInteractable
             {
                 postProcessVolume.enabled = false;
                 mainCamera.cullingMask = realWorldMask;
+                RenderSettings.fogDensity = 0.01f;
+                RenderSettings.skybox = realSky;
                 doorScript.SpiritWorld(false);
                 controllerAnim.SetTrigger("RealSide");
             }
