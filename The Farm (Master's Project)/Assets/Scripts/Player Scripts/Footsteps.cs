@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Footsteps : MonoBehaviour
 {
-    public AudioClip[] footstepSounds;
+    public AudioClip[] footstepSoundsOutdoor;
+    public AudioClip[] footstepSoundsIndoor;
     public float footstepInterval = 0.5f;
     private float footstepTimer = 0f;
     private bool isMoving = false;
+    public bool isWood = false;
     private AudioSource audioSource;
 
     private void Start()
@@ -37,10 +39,16 @@ public class Footsteps : MonoBehaviour
 
     private void PlayFootstepSound()
     {
-        if (footstepSounds.Length > 0)
+        if (isWood == false & footstepSoundsOutdoor.Length > 0)
         {
-            int randomIndex = Random.Range(0, footstepSounds.Length);
-            audioSource.PlayOneShot(footstepSounds[randomIndex]);
+            int randomIndex = Random.Range(0, footstepSoundsOutdoor.Length);
+            audioSource.PlayOneShot(footstepSoundsOutdoor[randomIndex]);
+        }
+
+        else if (isWood == true & footstepSoundsIndoor.Length > 0)
+        {
+            int randomIndex = Random.Range(0, footstepSoundsIndoor.Length);
+            audioSource.PlayOneShot(footstepSoundsIndoor[randomIndex]);
         }
     }
 }
