@@ -7,16 +7,20 @@ public class Lightswitch : MonoBehaviour, IInteractable
     //Variable assignment
     [SerializeField] private GameObject _switch;
     [SerializeField] private GameObject breaker;
+    [SerializeField] private AudioClip switchOnAudio;
+    [SerializeField] private AudioClip switchOffAudio;
     private BreakerInteract breakerInteract;
     private Light light;
 
     public bool switchOn = false;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         light = _switch.GetComponent<Light>();
         breakerInteract = breaker.GetComponent<BreakerInteract>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,6 +38,7 @@ public class Lightswitch : MonoBehaviour, IInteractable
             {
                 light.enabled = true;
                 switchOn = true;
+                audioSource.PlayOneShot(switchOnAudio);
             }
             
         }
@@ -43,6 +48,7 @@ public class Lightswitch : MonoBehaviour, IInteractable
             {
                 light.enabled = false;
                 switchOn = false;
+                audioSource.PlayOneShot(switchOffAudio);
             }
         }
     }

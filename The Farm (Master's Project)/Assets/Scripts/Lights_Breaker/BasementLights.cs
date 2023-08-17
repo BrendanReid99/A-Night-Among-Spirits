@@ -29,6 +29,10 @@ public class BasementLights : MonoBehaviour, IInteractable
     [SerializeField] private GameObject breaker;
     private BreakerInteract breakerInteract;
 
+    [SerializeField] private AudioClip switchOnAudio;
+    [SerializeField] private AudioClip switchOffAudio;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +43,7 @@ public class BasementLights : MonoBehaviour, IInteractable
         light4 = _light4.GetComponent<Light>();
         light5 = _light5.GetComponent<Light>();
         breakerInteract = breaker.GetComponent<BreakerInteract>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,6 +60,8 @@ public class BasementLights : MonoBehaviour, IInteractable
 
         if (switchOn == false)
         {
+            audioSource.PlayOneShot(switchOnAudio);
+
             if (breakerInteract.breakerOn == true)
             {
                 if (light0.enabled == false)
@@ -75,6 +82,8 @@ public class BasementLights : MonoBehaviour, IInteractable
         }
         else
         {
+            audioSource.PlayOneShot(switchOffAudio);
+
             if (light0.enabled == true)
             {
                 light0.enabled = false;

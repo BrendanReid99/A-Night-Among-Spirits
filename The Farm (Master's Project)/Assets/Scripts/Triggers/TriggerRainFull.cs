@@ -14,7 +14,7 @@ public class TriggerRainFull : MonoBehaviour
     }
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Collision");
+        
         weather.GetComponent<AudioSource>().volume = 1.0f; //dampens the volume of the weather whilst inside the house
     }
 }
