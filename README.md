@@ -15,3 +15,5 @@ Skyboxes - Sean Duffy https://assetstore.unity.com/packages/2d/textures-material
 Ground textures - A dog's life software https://assetstore.unity.com/packages/2d/textures-materials/floors/outdoor-ground-textures-12555
 Pickup truck - Perfect Games https://assetstore.unity.com/packages/3d/vehicles/land/pickup-model-135387
 Water - Nick Veselov https://assetstore.unity.com/packages/vfx/shaders/water-shaders-v2-x-149916
+Teddy - Arch Cer https://www.turbosquid.com/3d-models/free-teddy-bear-3d-model/955596
+
