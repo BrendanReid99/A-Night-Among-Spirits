@@ -16,7 +16,7 @@ public class WoodCreaking : MonoBehaviour
     {
         woodCreak = GetComponent<AudioSource>();
         interval = Random.Range(25.0f, 75.0f);
-        Debug.Log(interval);
+        
     }
 
     // Update is called once per frame
