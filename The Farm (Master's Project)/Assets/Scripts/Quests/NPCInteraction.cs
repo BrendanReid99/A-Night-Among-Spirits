@@ -35,11 +35,11 @@ public class NPCInteraction : MonoBehaviour, IInteractable
         {
             quest.GiveQuest();
         }
-        if(quest.questStage == 1)
+        else if(quest.questStage == 1)
         {
             quest.QuestIncomplete();
         }
-        if(quest.questStage == 2)
+        else if(quest.questStage == 2)
         {
             quest.CompleteQuest();
         }
