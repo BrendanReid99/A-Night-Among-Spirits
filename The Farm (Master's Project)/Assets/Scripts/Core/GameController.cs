@@ -306,7 +306,7 @@ public class GameController : MonoBehaviour
         FlypaperText.gameObject.SetActive(true);
         if(flyPapersCollected == 1)
         {
-            FlypaperText.text = "You've collected a strip of flypaper - perhaps you could fashion a sticky trap.";
+            FlypaperText.text = "You've collected a strip of flypaper - perhaps you could fashion a sticky trap out of a few more of these.";
         }
         else if (flyPapersCollected > 1)
         {
