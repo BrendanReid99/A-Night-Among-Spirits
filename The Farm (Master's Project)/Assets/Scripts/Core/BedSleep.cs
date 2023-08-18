@@ -15,6 +15,8 @@ public class BedSleep : MonoBehaviour, IInteractable
     Animator anim;
     Animator doorAnim;
     Animator breakerAnim;
+    [SerializeField] private AudioClip banging;
+    private AudioSource audio;
 
     private float fadeDuration = 2f;
     public Image fadeBlack;
@@ -34,6 +36,7 @@ public class BedSleep : MonoBehaviour, IInteractable
         doorAnim = _door.GetComponent<Animator>();
         breaker = _breaker.GetComponent<BreakerInteract>();
         breakerAnim = _breaker.GetComponent<Animator>();
+        audio = _door.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -85,6 +88,7 @@ public class BedSleep : MonoBehaviour, IInteractable
         breaker.stageTwo = true;
         breaker.breakerOn = false;
         breakerAnim.Play("BreakerOff");
+        audio.PlayOneShot(banging);
 
         yield return new WaitForSeconds(2);
 
