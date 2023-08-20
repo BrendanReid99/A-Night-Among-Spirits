@@ -33,6 +33,7 @@ Chess Set - Cosmic Creations (https://assetstore.unity.com/publishers/30621)
 
 ## Audio Assets
 
+
 Main Menu Music - Vivek Abhishek (https://www.youtube.com/watch?v=ln_a4bwRF9o&ab_channel=VIVEKABHISHEK)
 
 Rainfall - The Phantom Monk (https://www.youtube.com/watch?v=ZVrOUnWVZ6s&ab_channel=ThePhantomMonk)
@@ -43,5 +44,12 @@ Lightswitches - Free sound effects (https://www.youtube.com/watch?v=gOLB0kWxJak&
 
 Broken Radio - Sound of Music (https://www.youtube.com/watch?v=qRW4v89m7gY&ab_channel=SoundofMusic%F0%9F%8E%B5)
 
+Lake Sound - ZachTEM (https://www.youtube.com/watch?v=0NO3WKO0dOs&ab_channel=ZachTEM)
 
+Forest (Crow) Sound - Stock Media (https://www.youtube.com/watch?v=RgTMUzX4z_Q&ab_channel=StockMedia)
 
+Truck Driving - Sound Effect Database (https://www.youtube.com/watch?v=cC9iR-zoPtM&ab_channel=SoundEffectDatabase)
+
+Clock Tick - Sound Effect King (https://www.youtube.com/watch?v=rWza1GiDwgY&ab_channel=SoundEffectKing)
+
+*ALL SOUNDS WERE EDITED AND MODIFIED USING ABLETON LIVE SUITE 11 BY BRENDAN, THE ONLY EXCEPTION IS THE MAIN MENU MUSIC.*
