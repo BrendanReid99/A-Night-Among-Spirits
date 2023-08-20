@@ -4,7 +4,7 @@
 
 This repository contains the full game code for use in the Unity editor.
 
-The game files (to play the game) can be found at[ https://heriotwatt-my.sharepoint.com/:u:/r/personal/gs59_hw_ac_uk/Documents/ANightAmongSpirits.zip?csf=1&web=1&e=penEoi](https://heriotwatt-my.sharepoint.com/:u:/g/personal/gs59_hw_ac_uk/EZKXE9FHQNlHqTh2EDETYQEBwvphLA96s_b9F_OA0exL2Q?e=I6qnzJ) (must be accessed with a heriot-watt email account).
+The game files (to play the game) can be found at [ https://heriotwatt-my.sharepoint.com/:u:/r/personal/gs59_hw_ac_uk/Documents/ANightAmongSpirits.zip?csf=1&web=1&e=penEoi](https://heriotwatt-my.sharepoint.com/:u:/g/personal/gs59_hw_ac_uk/EZKXE9FHQNlHqTh2EDETYQEBt0jGd00sbX_Q7SJFjGVPPg?e=KjBXBq) (must be accessed with a heriot-watt email account).
 
 
 # Asset credits: 
